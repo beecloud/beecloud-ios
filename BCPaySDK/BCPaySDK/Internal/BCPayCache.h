@@ -5,7 +5,6 @@
 //  Created by Junxian Huang on 2/27/14.
 //  Copyright (c) 2014 BeeCloud Inc. All rights reserved.
 //
-#import <Foundation/Foundation.h>
 
 /*!
  This header file is *NOT* included in the public release.

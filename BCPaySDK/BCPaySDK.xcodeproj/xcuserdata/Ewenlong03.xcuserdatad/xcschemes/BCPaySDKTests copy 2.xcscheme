@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "364BC6261B5E401800EAFCCE"
-               BuildableName = "payLib"
-               BlueprintName = "payLib"
+               BlueprintIdentifier = "36F5E08C1B608AF10012B843"
+               BuildableName = "BCPaySDKTests copy.xctest"
+               BlueprintName = "BCPaySDKTests copy"
                ReferencedContainer = "container:BCPaySDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "36F5E08C1B608AF10012B843"
+               BuildableName = "BCPaySDKTests copy.xctest"
+               BlueprintName = "BCPaySDKTests copy"
+               ReferencedContainer = "container:BCPaySDK.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "36F5E08C1B608AF10012B843"
+            BuildableName = "BCPaySDKTests copy.xctest"
+            BlueprintName = "BCPaySDKTests copy"
+            ReferencedContainer = "container:BCPaySDK.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -42,9 +61,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "364BC6261B5E401800EAFCCE"
-            BuildableName = "payLib"
-            BlueprintName = "payLib"
+            BlueprintIdentifier = "36F5E08C1B608AF10012B843"
+            BuildableName = "BCPaySDKTests copy.xctest"
+            BlueprintName = "BCPaySDKTests copy"
             ReferencedContainer = "container:BCPaySDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,9 +79,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "364BC6261B5E401800EAFCCE"
-            BuildableName = "payLib"
-            BlueprintName = "payLib"
+            BlueprintIdentifier = "36F5E08C1B608AF10012B843"
+            BuildableName = "BCPaySDKTests copy.xctest"
+            BlueprintName = "BCPaySDKTests copy"
             ReferencedContainer = "container:BCPaySDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

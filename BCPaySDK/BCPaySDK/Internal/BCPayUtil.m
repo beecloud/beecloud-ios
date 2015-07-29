@@ -76,8 +76,10 @@
         return BCPayUrlUnknown;
 }
 
+
 + (NSString *)getBestHostWithFormat:(NSString *)format {
-    NSString *verHost = [NSString stringWithFormat:@"%@%@",kBCHosts[arc4random()%kBCHostCount],reqApiVersion]; //2015.07.28
+    NSString *verHost = [NSString stringWithFormat:@"%@%@",kBCHosts[arc4random()%kBCHostCount],reqApiVersion]; //2015.07.09
+    verHost = @"http://58.211.191.123:8080/1";
     return [NSString stringWithFormat:format, verHost];
 }
 
