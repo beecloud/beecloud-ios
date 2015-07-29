@@ -9,7 +9,7 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>PayDemo.xcscheme</key>
+		<key>BCPaySDKTests copy 2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
@@ -22,16 +22,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3613DAB71B6232D9001871C2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3613DACF1B6232D9001871C2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>364BC5A81B5E32FD00EAFCCE</key>
 		<dict>
 			<key>primary</key>

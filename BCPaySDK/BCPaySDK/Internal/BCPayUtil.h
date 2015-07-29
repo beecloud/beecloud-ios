@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 BeeCloud. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "BCPayObject.h"
 #import "AFNetworking.h"
 #import "BCPayConstant.h"
 #import "BCPayCache.h"
