@@ -13,7 +13,10 @@
  *  支付请求的响应
  */
 @interface BCPayResp : BCBaseResp  //type=201;
-
+/**
+ *  部分渠道(Ali,Baidu)回调会返回一些信息。
+ *  Baidu是结构为@{@"orderInfo":@"...."};其中orderInfo对应的value为前台支付必须;
+ */
 @property (nonatomic, retain) NSDictionary *paySource;
 
 @end

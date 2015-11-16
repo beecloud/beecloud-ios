@@ -9,7 +9,9 @@
 #import "BCBaseResp.h"
 #import "BCOfflinePayReq.h"
 @interface BCOfflinePayResp : BCBaseResp
-
+/**
+ *  待生成二维码的URL
+ */
 @property (nonatomic, retain) NSString *codeurl;
 
 @end

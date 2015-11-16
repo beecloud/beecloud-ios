@@ -14,9 +14,17 @@
  *  支付订单查询结果
  */
 @interface BCQueryBillResult : BCBaseResult
-
+/**
+ *  订单支付结果
+ */
 @property (nonatomic, assign) BOOL spayResult;
+/**
+ *  渠道流水号
+ */
 @property (nonatomic, retain) NSString *tradeNo;
+/**
+ *  订单撤销结果(WX_SCAN, ALI_SCAN, ALI_OFFLINE_QRCODE渠道是此参数有意义)
+ */
 @property (nonatomic, assign) BOOL revertResult;
 
 @end

@@ -14,12 +14,29 @@
  *  根据条件查询请求支付订单记录
  */
 @interface BCQueryReq : BCBaseReq 
-
+/**
+ *  支付渠道
+ */
 @property (nonatomic, assign) PayChannel channel;
+/**
+ *  商家自定义订单号
+ */
 @property (nonatomic, retain) NSString *billNo;
-@property (nonatomic, assign) NSString *startTime;//@"yyyyMMddHHmm"格式
-@property (nonatomic, assign) NSString *endTime;//@"yyyyMMddHHmm"格式
+/**
+ *  订单创建时间，@"yyyyMMddHHmm"格式
+ */
+@property (nonatomic, assign) NSString *startTime;
+/**
+ *  订单创建时间，@"yyyyMMddHHmm"格式
+ */
+@property (nonatomic, assign) NSString *endTime;
+/**
+ *  从第几条开始查询
+ */
 @property (nonatomic, assign) NSInteger skip;
+/**
+ *  查询多少条订单记录
+ */
 @property (nonatomic, assign) NSInteger limit;
 
 @end

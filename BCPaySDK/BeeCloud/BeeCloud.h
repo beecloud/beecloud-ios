@@ -38,8 +38,10 @@
  *
  *  @param appId     BeeCloud平台APPID
  *  @param appSecret BeeCloud平台APPSECRET
+ *
+ *  @return 初始化成功返回YES
  */
-+ (void)initWithAppID:(NSString *)appId andAppSecret:(NSString *)appSecret;
++ (BOOL)initWithAppID:(NSString *)appId andAppSecret:(NSString *)appSecret;
 
 /**
  *  需要在每次启动第三方应用程序时调用。第一次调用后，会在微信的可用应用列表中出现。

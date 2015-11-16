@@ -15,7 +15,7 @@
  */
 @interface BCBaseReq : NSObject
 /**
- *  //1:Pay;2:queryBills;3:queryRefunds;
+ *  请求事件类型
  */
 @property (nonatomic, assign) BCObjsType type;//100
 

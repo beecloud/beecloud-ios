@@ -9,8 +9,13 @@
 #import "BCBaseReq.h"
 
 @interface BCOfflineRevertReq : BCBaseReq
-
-@property (nonatomic, retain) NSString *billno;
+/**
+ *  商户自定义订单号
+ */
+@property (nonatomic, retain) NSString *billNo;
+/**
+ *  支付渠道
+ */
 @property (nonatomic, assign) PayChannel channel;
 
 @end

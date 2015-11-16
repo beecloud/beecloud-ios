@@ -9,8 +9,13 @@
 #import "BCBaseReq.h"
 
 @interface BCOfflineStatusReq : BCBaseReq
-
+/**
+ *  商户自定义订单号
+ */
 @property (nonatomic, retain) NSString *billno;
+/**
+ *  支付渠道
+ */
 @property (nonatomic, assign) PayChannel channel;
 
 @end

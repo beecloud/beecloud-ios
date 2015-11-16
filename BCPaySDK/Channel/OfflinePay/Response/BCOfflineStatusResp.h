@@ -10,5 +10,8 @@
 #import "BCOfflineStatusReq.h"
 
 @interface BCOfflineStatusResp : BCBaseResp
+/**
+ *  订单支付状态
+ */
 @property (nonatomic, assign) BOOL payResult;
 @end

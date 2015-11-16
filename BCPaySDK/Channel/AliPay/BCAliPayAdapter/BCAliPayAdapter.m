@@ -33,12 +33,14 @@
 }
 
 - (void)aliPay:(NSMutableDictionary *)dic {
-  
-    NSString *orderString = [dic objectForKey:@"order_string"];
-    [[AlipaySDK defaultService] payOrder:orderString fromScheme:dic[@"scheme"]
-                                callback:^(NSDictionary *resultDic) {
-                                    [[BCAliPayAdapter sharedInstance] processOrderForAliPay:resultDic];
-                                }];
+    
+    NSString *orderString = [dic stringValueForKey:@"order_string" defaultValue:@""];
+    if (orderString.isValid) {
+        [[AlipaySDK defaultService] payOrder:orderString fromScheme:[dic stringValueForKey:@"scheme" defaultValue:@""]
+                                    callback:^(NSDictionary *resultDic) {
+                                        [[BCAliPayAdapter sharedInstance] processOrderForAliPay:resultDic];
+                                    }];
+    }
 }
 
 #pragma mark - Implementation AliPayDelegate
@@ -50,7 +52,7 @@
     switch (status) {
         case 9000:
             strMsg = @"支付成功";
-            errcode = BCSuccess;
+            errcode = BCErrCodeSuccess;
             break;
         case 4000:
         case 6002:

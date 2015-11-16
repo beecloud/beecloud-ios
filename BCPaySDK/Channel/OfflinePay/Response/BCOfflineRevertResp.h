@@ -10,7 +10,9 @@
 #import "BCOfflineRevertReq.h"
 
 @interface BCOfflineRevertResp : BCBaseResp
-
+/**
+ *  订单撤销状态
+ */
 @property (nonatomic, assign) BOOL revertStatus;
 
 @end

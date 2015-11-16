@@ -13,7 +13,9 @@
  *  查询退款订单状态的响应
  */
 @interface BCRefundStatusResp : BCBaseResp
-
+/**
+ *  退款的状态
+ */
 @property (nonatomic, retain) NSString *refundStatus;
 
 @end

@@ -109,15 +109,13 @@
     }
     
     // 条码类型 AVMetadataObjectTypeQRCode
-    _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
+    _output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code];
     
     // Preview
     _preview =[AVCaptureVideoPreviewLayer layerWithSession:self.session];
     _preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
     _preview.frame = self.view.frame;//CGRectMake(20,110,280,280);
     [self.view.layer insertSublayer:self.preview atIndex:0];
-    
-
     
     // Start
     [_session startRunning];
