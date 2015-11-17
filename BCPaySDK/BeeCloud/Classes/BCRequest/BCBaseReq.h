@@ -11,11 +11,11 @@
 
 #pragma mark BCBaseReq
 /**
- *  BCPay 所有请求的基类
+ *  所有请求事件的基类,具体请参考BCRequest目录
  */
 @interface BCBaseReq : NSObject
 /**
- *  //1:Pay;2:queryBills;3:queryRefunds;
+ *  请求事件类型
  */
 @property (nonatomic, assign) BCObjsType type;//100
 

@@ -26,11 +26,15 @@
     return instance;
 }
 
-- (void)unionPay:(NSMutableDictionary *)dic {
-    NSString *tn = [dic objectForKey:@"tn"];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [UPPayPlugin startPay:tn mode:@"00" viewController:dic[@"viewController"] delegate:[BCUnionPayAdapter sharedInstance]];
-    });
+- (BOOL)unionPay:(NSMutableDictionary *)dic {
+    NSString *tn = [dic stringValueForKey:@"tn" defaultValue:@""];
+    if (tn.isValid) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UPPayPlugin startPay:tn mode:@"00" viewController:dic[@"viewController"] delegate:[BCUnionPayAdapter sharedInstance]];
+        });
+        return YES;
+    }
+    return NO;
 }
 
 #pragma mark - Implementation UnionPayDelegate
@@ -39,7 +43,7 @@
     int errcode = BCErrCodeSentFail;
     NSString *strMsg = @"支付失败";
     if ([result isEqualToString:@"success"]) {
-        errcode = BCSuccess;
+        errcode = BCErrCodeSuccess;
         strMsg = @"支付成功";
     } else if ([result isEqualToString:@"cancel"]) {
         errcode = BCErrCodeUserCancel;

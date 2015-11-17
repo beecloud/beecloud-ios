@@ -38,7 +38,7 @@
  *
  *  @return default request map
  */
-+ (NSMutableDictionary *)prepareParametersForPay;
++ (NSMutableDictionary *)prepareParametersForRequest;
 
 /**
  *  获取url的类型，微信或者支付宝

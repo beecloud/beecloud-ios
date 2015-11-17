@@ -40,24 +40,26 @@
 		3602F9501BA07C3000A28ADC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3602F9451BA07C3000A28ADC /* libWeChatSDK.a */; };
 		3602F9511BA07C3000A28ADC /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3602F9491BA07C3000A28ADC /* AlipaySDK.framework */; };
 		3602F9521BA07C3000A28ADC /* BCAliPayAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3602F94E1BA07C3000A28ADC /* BCAliPayAdapter.m */; };
+		362FC8EF1BF5DE5F007450FF /* XCTestCase+AsyncTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 362FC8E11BF5DE5F007450FF /* XCTestCase+AsyncTesting.m */; };
+		362FC8F01BF5DE5F007450FF /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 362FC8E31BF5DE5F007450FF /* libOCMock.a */; };
 		36379D351BC66A0700CA6C81 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 36379D341BC66A0700CA6C81 /* libsqlite3.tbd */; };
 		36379D371BC66A1300CA6C81 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 36379D361BC66A1300CA6C81 /* libc++.tbd */; };
-		3658AFCB1BB28B9400183C28 /* BCOfflineAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF591BB28B9400183C28 /* BCOfflineAdapter.m */; settings = {ASSET_TAGS = (); }; };
-		3658AFCC1BB28B9400183C28 /* BCOfflinePayReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF5C1BB28B9400183C28 /* BCOfflinePayReq.m */; settings = {ASSET_TAGS = (); }; };
-		3658AFCD1BB28B9400183C28 /* BCOfflineRevertReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF5E1BB28B9400183C28 /* BCOfflineRevertReq.m */; settings = {ASSET_TAGS = (); }; };
-		3658AFCE1BB28B9400183C28 /* BCOfflineStatusReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF601BB28B9400183C28 /* BCOfflineStatusReq.m */; settings = {ASSET_TAGS = (); }; };
-		3658AFCF1BB28B9400183C28 /* BCOfflinePayResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF631BB28B9400183C28 /* BCOfflinePayResp.m */; settings = {ASSET_TAGS = (); }; };
-		3658AFD01BB28B9400183C28 /* BCOfflineRevertResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF651BB28B9400183C28 /* BCOfflineRevertResp.m */; settings = {ASSET_TAGS = (); }; };
-		3658AFD11BB28B9400183C28 /* BCOfflineStatusResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF671BB28B9400183C28 /* BCOfflineStatusResp.m */; settings = {ASSET_TAGS = (); }; };
-		3658AFD21BB28B9400183C28 /* BaiduWalletSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3658AF6B1BB28B9400183C28 /* BaiduWalletSDKBundle.bundle */; settings = {ASSET_TAGS = (); }; };
-		3658AFD31BB28B9400183C28 /* libBaiduWalletSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3658AF6D1BB28B9400183C28 /* libBaiduWalletSDK.a */; settings = {ASSET_TAGS = (); }; };
-		3658AFDC1BB28B9400183C28 /* libBaiduMobStatForSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3658AF861BB28B9400183C28 /* libBaiduMobStatForSDK.a */; settings = {ASSET_TAGS = (); }; };
+		3658AFCB1BB28B9400183C28 /* BCOfflineAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF591BB28B9400183C28 /* BCOfflineAdapter.m */; };
+		3658AFCC1BB28B9400183C28 /* BCOfflinePayReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF5C1BB28B9400183C28 /* BCOfflinePayReq.m */; };
+		3658AFCD1BB28B9400183C28 /* BCOfflineRevertReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF5E1BB28B9400183C28 /* BCOfflineRevertReq.m */; };
+		3658AFCE1BB28B9400183C28 /* BCOfflineStatusReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF601BB28B9400183C28 /* BCOfflineStatusReq.m */; };
+		3658AFCF1BB28B9400183C28 /* BCOfflinePayResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF631BB28B9400183C28 /* BCOfflinePayResp.m */; };
+		3658AFD01BB28B9400183C28 /* BCOfflineRevertResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF651BB28B9400183C28 /* BCOfflineRevertResp.m */; };
+		3658AFD11BB28B9400183C28 /* BCOfflineStatusResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658AF671BB28B9400183C28 /* BCOfflineStatusResp.m */; };
+		3658AFD21BB28B9400183C28 /* BaiduWalletSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3658AF6B1BB28B9400183C28 /* BaiduWalletSDKBundle.bundle */; };
+		3658AFD31BB28B9400183C28 /* libBaiduWalletSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3658AF6D1BB28B9400183C28 /* libBaiduWalletSDK.a */; };
+		3658AFDC1BB28B9400183C28 /* libBaiduMobStatForSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3658AF861BB28B9400183C28 /* libBaiduMobStatForSDK.a */; };
 		3658AFFF1BB295F700183C28 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3658AFFE1BB295F700183C28 /* CoreTelephony.framework */; };
-		3658B0021BB2A0DA00183C28 /* PayChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658B0011BB2A0DA00183C28 /* PayChannelCell.m */; settings = {ASSET_TAGS = (); }; };
-		367179AE1BCDF3F000A128DC /* libASIHTTPRequest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 367179AD1BCDF3F000A128DC /* libASIHTTPRequest.a */; settings = {ASSET_TAGS = (); }; };
-		367179F81BCDF8CF00A128DC /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 367179F71BCDF8CF00A128DC /* libTouchJSON.a */; settings = {ASSET_TAGS = (); }; };
-		36717A181BCDFA0700A128DC /* libJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36717A171BCDFA0700A128DC /* libJSONKit.a */; settings = {ASSET_TAGS = (); }; };
-		36717A7F1BCDFB5E00A128DC /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36717A6F1BCDFB5E00A128DC /* libSDWebImage.a */; settings = {ASSET_TAGS = (); }; };
+		3658B0021BB2A0DA00183C28 /* PayChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658B0011BB2A0DA00183C28 /* PayChannelCell.m */; };
+		367179AE1BCDF3F000A128DC /* libASIHTTPRequest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 367179AD1BCDF3F000A128DC /* libASIHTTPRequest.a */; };
+		367179F81BCDF8CF00A128DC /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 367179F71BCDF8CF00A128DC /* libTouchJSON.a */; };
+		36717A181BCDFA0700A128DC /* libJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36717A171BCDFA0700A128DC /* libJSONKit.a */; };
+		36717A7F1BCDFB5E00A128DC /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36717A6F1BCDFB5E00A128DC /* libSDWebImage.a */; };
 		367267DC1BAA63BC007D7C64 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367267D81BAA63BC007D7C64 /* ScanViewController.m */; };
 		367267DD1BAA63BC007D7C64 /* pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 367267DA1BAA63BC007D7C64 /* pick_bg@2x.png */; };
 		367267DE1BAA63BC007D7C64 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 367267DB1BAA63BC007D7C64 /* line@2x.png */; };
@@ -72,7 +74,7 @@
 		368EA8E21BB3929000F1F9D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368EA8E11BB3929000F1F9D3 /* CoreGraphics.framework */; };
 		368EA8E41BB392AF00F1F9D3 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 368EA8E31BB392AF00F1F9D3 /* libz.1.2.5.tbd */; };
 		368EA8E61BB392C100F1F9D3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368EA8E51BB392C100F1F9D3 /* MapKit.framework */; };
-		369110691BB3F130003FE49D /* BCBaiduAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 369110681BB3F130003FE49D /* BCBaiduAdapter.m */; settings = {ASSET_TAGS = (); }; };
+		369110691BB3F130003FE49D /* BCBaiduAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 369110681BB3F130003FE49D /* BCBaiduAdapter.m */; };
 		369750261B68C659009FAEDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 369750251B68C659009FAEDB /* main.m */; };
 		369750291B68C659009FAEDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 369750281B68C659009FAEDB /* AppDelegate.m */; };
 		3697502C1B68C659009FAEDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3697502B1B68C659009FAEDB /* ViewController.m */; };
@@ -83,8 +85,8 @@
 		3697504C1B68C6D5009FAEDB /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369750481B68C6D5009FAEDB /* GuideViewController.m */; };
 		369B3A191BA95CB300051CCE /* GenQrCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 369B3A181BA95CB300051CCE /* GenQrCode.m */; };
 		369B3A1C1BA9646300051CCE /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369B3A1B1BA9646200051CCE /* QRCodeViewController.m */; };
-		36A3C0801BB535B2003E82B1 /* NSDictionary+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A3C07F1BB535B2003E82B1 /* NSDictionary+Utils.m */; settings = {ASSET_TAGS = (); }; };
-		36AF1A251BB158810007592E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36AF1A241BB158810007592E /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
+		36A3C0801BB535B2003E82B1 /* NSDictionary+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A3C07F1BB535B2003E82B1 /* NSDictionary+Utils.m */; };
+		36AF1A251BB158810007592E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36AF1A241BB158810007592E /* InfoPlist.strings */; };
 		36CAEF531BA275DA002AB286 /* BeeCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CAEF501BA275DA002AB286 /* BeeCloud.m */; };
 		36DCE40B1B8F4A19004BB25E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DCE4091B8F4A19004BB25E /* Accelerate.framework */; };
 		36DCE40C1B8F4A19004BB25E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DCE40A1B8F4A19004BB25E /* AVFoundation.framework */; };
@@ -93,7 +95,22 @@
 		36DCE4121B8F4A78004BB25E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DCE4111B8F4A78004BB25E /* MessageUI.framework */; };
 		36DCE4141B8F4A93004BB25E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DCE4131B8F4A93004BB25E /* CoreLocation.framework */; };
 		36DCE4161B8F4ACA004BB25E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DCE4151B8F4ACA004BB25E /* AudioToolbox.framework */; };
+		7C43BF941BEDE26F0039B4E4 /* BCPayUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C43BF8F1BEDE26F0039B4E4 /* BCPayUtilTest.m */; };
+		7C43BF951BEDE26F0039B4E4 /* BeeCloudUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C43BF911BEDE26F0039B4E4 /* BeeCloudUtilsTest.m */; };
+		7C43BF9A1BEDE8D00039B4E4 /* NSStringIsValidTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C43BF991BEDE8D00039B4E4 /* NSStringIsValidTest.m */; };
+		7C43BF9C1BEDED200039B4E4 /* NSDictionaryUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C43BF9B1BEDED200039B4E4 /* NSDictionaryUtilsTest.m */; };
+		7CD455551BEC889F00E0EC4A /* BeeCloud+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD455541BEC889F00E0EC4A /* BeeCloud+Utils.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C43BF8A1BEDE22B0039B4E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364BC5A11B5E32FD00EAFCCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 369750201B68C659009FAEDB;
+			remoteInfo = BCPayExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3602F8B21BA031E800A28ADC /* BCBaseReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCBaseReq.h; sourceTree = "<group>"; };
@@ -167,6 +184,19 @@
 		3602F94B1BA07C3000A28ADC /* APayAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APayAuthInfo.h; sourceTree = "<group>"; };
 		3602F94D1BA07C3000A28ADC /* BCAliPayAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAliPayAdapter.h; sourceTree = "<group>"; };
 		3602F94E1BA07C3000A28ADC /* BCAliPayAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAliPayAdapter.m; sourceTree = "<group>"; };
+		362FC8E01BF5DE5F007450FF /* XCTestCase+AsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+AsyncTesting.h"; sourceTree = "<group>"; };
+		362FC8E11BF5DE5F007450FF /* XCTestCase+AsyncTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+AsyncTesting.m"; sourceTree = "<group>"; };
+		362FC8E31BF5DE5F007450FF /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		362FC8E51BF5DE5F007450FF /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		362FC8E61BF5DE5F007450FF /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		362FC8E71BF5DE5F007450FF /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		362FC8E81BF5DE5F007450FF /* OCMFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMFunctions.h; sourceTree = "<group>"; };
+		362FC8E91BF5DE5F007450FF /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		362FC8EA1BF5DE5F007450FF /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		362FC8EB1BF5DE5F007450FF /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		362FC8EC1BF5DE5F007450FF /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		362FC8ED1BF5DE5F007450FF /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		362FC8EE1BF5DE5F007450FF /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
 		36379D341BC66A0700CA6C81 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		36379D361BC66A1300CA6C81 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		3658AF561BB28B9400183C28 /* BCOffinePay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCOffinePay.h; sourceTree = "<group>"; };
@@ -271,6 +301,15 @@
 		36DCE4111B8F4A78004BB25E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		36DCE4131B8F4A93004BB25E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		36DCE4151B8F4ACA004BB25E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7C43BF851BEDE22B0039B4E4 /* BCPayTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCPayTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C43BF891BEDE22B0039B4E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C43BF8F1BEDE26F0039B4E4 /* BCPayUtilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayUtilTest.m; sourceTree = "<group>"; };
+		7C43BF901BEDE26F0039B4E4 /* BCTestHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTestHeader.h; sourceTree = "<group>"; };
+		7C43BF911BEDE26F0039B4E4 /* BeeCloudUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeeCloudUtilsTest.m; sourceTree = "<group>"; };
+		7C43BF991BEDE8D00039B4E4 /* NSStringIsValidTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringIsValidTest.m; sourceTree = "<group>"; };
+		7C43BF9B1BEDED200039B4E4 /* NSDictionaryUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryUtilsTest.m; sourceTree = "<group>"; };
+		7CD455531BEC889F00E0EC4A /* BeeCloud+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeeCloud+Utils.h"; sourceTree = "<group>"; };
+		7CD455541BEC889F00E0EC4A /* BeeCloud+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BeeCloud+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +346,14 @@
 				36DCE40C1B8F4A19004BB25E /* AVFoundation.framework in Frameworks */,
 				3602F93E1BA031E800A28ADC /* libUPPayPlugin.a in Frameworks */,
 				3658AFD31BB28B9400183C28 /* libBaiduWalletSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C43BF821BEDE22B0039B4E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362FC8F01BF5DE5F007450FF /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +454,8 @@
 				3602F8D71BA031E800A28ADC /* NSString+IsValid.m */,
 				36A3C07E1BB535B2003E82B1 /* NSDictionary+Utils.h */,
 				36A3C07F1BB535B2003E82B1 /* NSDictionary+Utils.m */,
+				7CD455531BEC889F00E0EC4A /* BeeCloud+Utils.h */,
+				7CD455541BEC889F00E0EC4A /* BeeCloud+Utils.m */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -520,11 +569,47 @@
 			path = BCAliPayAdapter;
 			sourceTree = "<group>";
 		};
+		362FC8DF1BF5DE5F007450FF /* TestCategory */ = {
+			isa = PBXGroup;
+			children = (
+				362FC8E01BF5DE5F007450FF /* XCTestCase+AsyncTesting.h */,
+				362FC8E11BF5DE5F007450FF /* XCTestCase+AsyncTesting.m */,
+			);
+			path = TestCategory;
+			sourceTree = "<group>";
+		};
+		362FC8E21BF5DE5F007450FF /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				362FC8E31BF5DE5F007450FF /* libOCMock.a */,
+				362FC8E41BF5DE5F007450FF /* OCMock */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		362FC8E41BF5DE5F007450FF /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				362FC8E51BF5DE5F007450FF /* NSNotificationCenter+OCMAdditions.h */,
+				362FC8E61BF5DE5F007450FF /* OCMArg.h */,
+				362FC8E71BF5DE5F007450FF /* OCMConstraint.h */,
+				362FC8E81BF5DE5F007450FF /* OCMFunctions.h */,
+				362FC8E91BF5DE5F007450FF /* OCMLocation.h */,
+				362FC8EA1BF5DE5F007450FF /* OCMMacroState.h */,
+				362FC8EB1BF5DE5F007450FF /* OCMock.h */,
+				362FC8EC1BF5DE5F007450FF /* OCMockObject.h */,
+				362FC8ED1BF5DE5F007450FF /* OCMRecorder.h */,
+				362FC8EE1BF5DE5F007450FF /* OCMStubRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
 		364BC5A01B5E32FD00EAFCCE = {
 			isa = PBXGroup;
 			children = (
 				3602F8AE1BA031E800A28ADC /* BCPaySDK */,
 				369750221B68C659009FAEDB /* BCPayExample */,
+				7C43BF861BEDE22B0039B4E4 /* BCPayTest */,
 				364BC6E81B5F2AE700EAFCCE /* Frameworks */,
 				364BC5AA1B5E32FD00EAFCCE /* Products */,
 			);
@@ -534,6 +619,7 @@
 			isa = PBXGroup;
 			children = (
 				369750211B68C659009FAEDB /* BCPay.app */,
+				7C43BF851BEDE22B0039B4E4 /* BCPayTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -776,6 +862,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7C43BF861BEDE22B0039B4E4 /* BCPayTest */ = {
+			isa = PBXGroup;
+			children = (
+				7C43BF971BEDE52E0039B4E4 /* XCTestCase */,
+				7C43BF8F1BEDE26F0039B4E4 /* BCPayUtilTest.m */,
+				7C43BF911BEDE26F0039B4E4 /* BeeCloudUtilsTest.m */,
+				7C43BF991BEDE8D00039B4E4 /* NSStringIsValidTest.m */,
+				7C43BF9B1BEDED200039B4E4 /* NSDictionaryUtilsTest.m */,
+			);
+			path = BCPayTest;
+			sourceTree = "<group>";
+		};
+		7C43BF971BEDE52E0039B4E4 /* XCTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				362FC8DF1BF5DE5F007450FF /* TestCategory */,
+				362FC8E21BF5DE5F007450FF /* OCMock */,
+				7C43BF891BEDE22B0039B4E4 /* Info.plist */,
+				7C43BF901BEDE26F0039B4E4 /* BCTestHeader.h */,
+			);
+			name = XCTestCase;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -796,6 +905,24 @@
 			productReference = 369750211B68C659009FAEDB /* BCPay.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7C43BF841BEDE22B0039B4E4 /* BCPayTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C43BF8C1BEDE22B0039B4E4 /* Build configuration list for PBXNativeTarget "BCPayTest" */;
+			buildPhases = (
+				7C43BF811BEDE22B0039B4E4 /* Sources */,
+				7C43BF821BEDE22B0039B4E4 /* Frameworks */,
+				7C43BF831BEDE22B0039B4E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C43BF8B1BEDE22B0039B4E4 /* PBXTargetDependency */,
+			);
+			name = BCPayTest;
+			productName = BCPayTest;
+			productReference = 7C43BF851BEDE22B0039B4E4 /* BCPayTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -808,6 +935,10 @@
 					369750201B68C659009FAEDB = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = Y5MWN9388T;
+					};
+					7C43BF841BEDE22B0039B4E4 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 369750201B68C659009FAEDB;
 					};
 				};
 			};
@@ -825,6 +956,7 @@
 			projectRoot = "";
 			targets = (
 				369750201B68C659009FAEDB /* BCPayExample */,
+				7C43BF841BEDE22B0039B4E4 /* BCPayTest */,
 			);
 		};
 /* End PBXProject section */
@@ -841,6 +973,13 @@
 				369750341B68C659009FAEDB /* LaunchScreen.xib in Resources */,
 				367267DD1BAA63BC007D7C64 /* pick_bg@2x.png in Resources */,
 				369750311B68C659009FAEDB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C43BF831BEDE22B0039B4E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -877,6 +1016,7 @@
 				367F668B1BAAB48900B3466F /* BCPayPalAdapter.m in Sources */,
 				3658AFD01BB28B9400183C28 /* BCOfflineRevertResp.m in Sources */,
 				3602F9341BA031E800A28ADC /* AFSecurityPolicy.m in Sources */,
+				7CD455551BEC889F00E0EC4A /* BeeCloud+Utils.m in Sources */,
 				3697504B1B68C6D5009FAEDB /* QueryResultViewController.m in Sources */,
 				3658AFCD1BB28B9400183C28 /* BCOfflineRevertReq.m in Sources */,
 				3602F94F1BA07C3000A28ADC /* BCWXPayAdapter.m in Sources */,
@@ -904,7 +1044,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7C43BF811BEDE22B0039B4E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362FC8EF1BF5DE5F007450FF /* XCTestCase+AsyncTesting.m in Sources */,
+				7C43BF9A1BEDE8D00039B4E4 /* NSStringIsValidTest.m in Sources */,
+				7C43BF941BEDE26F0039B4E4 /* BCPayUtilTest.m in Sources */,
+				7C43BF9C1BEDED200039B4E4 /* NSDictionaryUtilsTest.m in Sources */,
+				7C43BF951BEDE26F0039B4E4 /* BeeCloudUtilsTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C43BF8B1BEDE22B0039B4E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 369750201B68C659009FAEDB /* BCPayExample */;
+			targetProxy = 7C43BF8A1BEDE22B0039B4E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3697502D1B68C659009FAEDB /* Main.storyboard */ = {
@@ -1041,7 +1201,7 @@
 					"$(PROJECT_DIR)/BCPaySDK/Channel/Baidu/Dependency/SDWebImage",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "cn.beecloud.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.beecloud.BCPay;
 				PRODUCT_NAME = BCPay;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1079,11 +1239,52 @@
 					"$(PROJECT_DIR)/BCPaySDK/Channel/Baidu/Dependency/SDWebImage",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "cn.beecloud.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.beecloud.BCPay;
 				PRODUCT_NAME = BCPay;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+			};
+			name = Release;
+		};
+		7C43BF8D1BEDE22B0039B4E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/BCPayTest/OCMock";
+				INFOPLIST_FILE = BCPayTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BCPayTest/OCMock",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.beecloud.BCPayTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BCPay.app/BCPay";
+			};
+			name = Debug;
+		};
+		7C43BF8E1BEDE22B0039B4E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/BCPayTest/OCMock";
+				INFOPLIST_FILE = BCPayTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BCPayTest/OCMock",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.beecloud.BCPayTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BCPay.app/BCPay";
 			};
 			name = Release;
 		};
@@ -1104,6 +1305,15 @@
 			buildConfigurations = (
 				369750421B68C659009FAEDB /* Debug */,
 				369750431B68C659009FAEDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C43BF8C1BEDE22B0039B4E4 /* Build configuration list for PBXNativeTarget "BCPayTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C43BF8D1BEDE22B0039B4E4 /* Debug */,
+				7C43BF8E1BEDE22B0039B4E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

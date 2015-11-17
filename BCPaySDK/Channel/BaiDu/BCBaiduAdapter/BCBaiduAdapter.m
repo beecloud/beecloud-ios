@@ -11,18 +11,22 @@
 #import "BCPayUtil.h"
 #import "BDWalletSDKMainManager.h"
 
+static NSString * const kBaiduOrderInfo = @"orderInfo";
+
 @interface BCBaiduAdapter ()<BeeCloudAdapterDelegate>
 @end
 
 @implementation BCBaiduAdapter
 
-- (void)baiduPay:(NSMutableDictionary *)dic {
+- (NSString *)baiduPay:(NSMutableDictionary *)dic {
     BCPayResp *resp = (BCPayResp *)[BCPayCache sharedInstance].bcResp;
-    resp.resultCode = [[dic objectForKey:kKeyResponseResultCode] intValue];
-    resp.resultMsg = [dic objectForKey:kKeyResponseResultMsg];
-    resp.errDetail = [dic objectForKey:kKeyResponseErrDetail];
-    resp.paySource = @{@"orderInfo":[dic objectForKey:@"orderInfo"]};
+    resp.resultCode = [dic integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
+    resp.resultMsg = [dic stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
+    resp.errDetail = [dic stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
+    NSString *orderInfo = [dic stringValueForKey:kBaiduOrderInfo defaultValue:@""];
+    resp.paySource = [NSDictionary dictionaryWithObjectsAndKeys:orderInfo, kBaiduOrderInfo,nil];
     [BCPayCache beeCloudDoResponse];
+    return orderInfo;
 }
 
 @end

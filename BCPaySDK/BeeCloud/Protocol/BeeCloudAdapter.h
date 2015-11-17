@@ -15,14 +15,17 @@
 + (BOOL)beeCloudIsWXAppInstalled;
 + (void)beeCloudRegisterPayPal:(NSString *)clientID secret:(NSString *)secret sanBox:(BOOL)isSandBox;
 + (BOOL)beeCloud:(NSString *)object handleOpenUrl:(NSURL *)url;
-+ (void)beeCloudWXPay:(NSMutableDictionary *)dic;
-+ (void)beeCloudAliPay:(NSMutableDictionary *)dic;
-+ (void)beeCloudUnionPay:(NSMutableDictionary *)dic;
+
++ (BOOL)beeCloudWXPay:(NSMutableDictionary *)dic;
++ (BOOL)beeCloudAliPay:(NSMutableDictionary *)dic;
++ (BOOL)beeCloudUnionPay:(NSMutableDictionary *)dic;
++ (NSString *)beeCloudBaiduPay:(NSMutableDictionary *)dic;
+
 + (void)beeCloudPayPal:(NSMutableDictionary *)dic;
 + (void)beeCloudPayPalVerify:(NSMutableDictionary *)dic;
 + (void)beeCloudOfflinePay:(NSMutableDictionary *)dic;
 + (void)beeCloudOfflineStatus:(NSMutableDictionary *)dic;
 + (void)beeCloudOfflineRevert:(NSMutableDictionary *)dic;
-+ (void)beeCloudBaiduPay:(NSMutableDictionary *)dic;
+
 
 @end

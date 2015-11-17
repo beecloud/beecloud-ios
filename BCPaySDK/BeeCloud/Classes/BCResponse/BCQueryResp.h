@@ -18,7 +18,9 @@
  *  查询到得结果数量
  */
 @property (nonatomic, assign) NSInteger count;
-
+/**
+ *  每个节点是BCQueryBillResult或者BCQueryRefundResult类型的实例
+ */
 @property (nonatomic, retain) NSMutableArray *results;
 
 @end
