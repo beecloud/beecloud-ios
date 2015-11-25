@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BeeCloud.h"
 
-static NSString * const billTitle = @"2015-10-21 Release";
+static NSString * const billTitle = @"2015-11-12 Release";
 
 @interface ViewController : UITableViewController<UIAlertViewDelegate, BeeCloudDelegate>
 

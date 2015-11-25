@@ -28,7 +28,7 @@
     return paramWrapper;
 }
 
-+ (NSMutableDictionary *)prepareParametersForPay {
++ (NSMutableDictionary *)prepareParametersForRequest {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     NSNumber *timeStamp = [NSNumber numberWithLongLong:[BCPayUtil dateToMillisecond:[NSDate date]]];
     NSString *appSign = [BCPayUtil getAppSignature:[NSString stringWithFormat:@"%@",timeStamp]];

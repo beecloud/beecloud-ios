@@ -13,7 +13,9 @@
  *  根据条件查询退款记录
  */
 @interface BCQueryRefundReq : BCQueryReq //type=103;
-
+/**
+ *  发起退款时商户自定义的退款单号
+ */
 @property (nonatomic, retain) NSString *refundNo;
 
 @end

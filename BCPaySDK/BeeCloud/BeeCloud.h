@@ -38,8 +38,10 @@
  *
  *  @param appId     BeeCloud平台APPID
  *  @param appSecret BeeCloud平台APPSECRET
+ *
+ *  @return 初始化成功返回YES; 若appId或者appSecret不合法，初始化失败返回NO
  */
-+ (void)initWithAppID:(NSString *)appId andAppSecret:(NSString *)appSecret;
++ (BOOL)initWithAppID:(NSString *)appId andAppSecret:(NSString *)appSecret;
 
 /**
  *  需要在每次启动第三方应用程序时调用。第一次调用后，会在微信的可用应用列表中出现。
@@ -57,8 +59,10 @@
  *  @param clientID paypal clientId
  *  @param secret   paypal secret
  *  @param isSandBox 是否是sanbox环境
+ *
+ *  @return  初始化成功返回YES; 若clientID或者secret不合法，初始化失败返回NO
  */
-+ (void)initPayPal:(NSString *)clientID secret:(NSString *)secret sanBox:(BOOL)isSandBox;
++ (BOOL)initPayPal:(NSString *)clientID secret:(NSString *)secret sanBox:(BOOL)isSandBox;
 
 /**
  * 处理通过URL启动App时传递的数据。需要在application:openURL:sourceApplication:annotation:中调用。
@@ -72,10 +76,15 @@
 /**
  *  设置接收消息的对象
  *
- *  @param delegate BCApiDelegate对象，用来接收BeeCloud触发的消息。
+ *  @param delegate BeeCloudDelegate对象，用来接收BeeCloud触发的消息。
  */
 + (void)setBeeCloudDelegate:(id<BeeCloudDelegate>)delegate;
 
+/**
+ *  获取接收消息的对象
+ *
+ *  @return BeeCloudDelegate对象，用来接收BeeCloud触发的消息。
+ */
 + (id<BeeCloudDelegate>)getBeeCloudDelegate;
 
 /**
@@ -102,12 +111,12 @@
 #pragma mark - Send BeeCloud Request
 
 /**
- *  发送BeeCloud Api请求
+ *  发送BeeCloud Request请求
  *
  *  @param req 请求体
  *
  *  @return 发送请求是否成功
  */
-+ (void)sendBCReq:(BCBaseReq *)req;
++ (BOOL)sendBCReq:(BCBaseReq *)req;
 
 @end

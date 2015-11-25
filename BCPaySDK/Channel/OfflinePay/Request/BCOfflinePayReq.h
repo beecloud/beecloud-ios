@@ -32,17 +32,17 @@
  */
 @property (nonatomic, retain) NSString *authcode;
 /**
- *  扩展参数,可以传入任意数量的key/value对来补充对业务逻辑的需求
+ *  扩展参数,可以传入任意数量的key/value对来补充对业务逻辑的需求;此参数会在webhook回调中返回;
  */
 @property (nonatomic, retain) NSMutableDictionary *optional;
 
 #pragma mark channel=ALI_SCAN时需要根据实际情况传递以下两个
 /**
- *  商户机具终端编号,最长32位.若机具商接入，terminalid(机具终端编号)必填，storeid(商户门店编号)选填
+ *  商户机具终端编号,最长32位.若机具商接入,terminalid(机具终端编号)必填,storeid(商户门店编号)选填
  */
 @property (nonatomic, retain) NSString *terminalid;
 /**
- *  商户门店编号,最长32位.若系统商接入，storeid(商户的门店编号)必填，terminalid(机具终端编号)选填
+ *  商户门店编号,最长32位.若系统商接入,storeid(商户的门店编号)必填,terminalid(机具终端编号)选填
  */
 @property (nonatomic, retain) NSString *storeid;
 

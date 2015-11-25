@@ -15,6 +15,9 @@
     if (self) {
         self.type = BCObjsTypeBaseResp;
         self.request = request;
+        self.resultCode = BCErrCodeCommon;
+        self.resultMsg = @"";
+        self.errDetail = @"";
     }
     return self;
 }

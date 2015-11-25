@@ -14,6 +14,7 @@
 static NSString * const kApiVersion = @"3.3.2";//api版本号
 
 static NSString * const kNetWorkError = @"网络请求失败";
+static NSString * const kUnknownError = @"未知错误";
 static NSString * const kKeyResponseResultCode = @"result_code";
 static NSString * const kKeyResponseResultMsg = @"result_msg";
 static NSString * const kKeyResponseErrDetail = @"err_detail";
@@ -76,6 +77,8 @@ typedef NS_ENUM(NSInteger, BCPayUrlType) {
 
 
 typedef NS_ENUM(NSInteger, PayChannel) {
+    PayChannelNone = 0,
+    
     PayChannelWx = 10, //微信
     PayChannelWxApp,//微信APP
     PayChannelWxNative,//微信扫码
@@ -104,8 +107,8 @@ typedef NS_ENUM(NSInteger, PayChannel) {
     PayChannelBaiduWap
 };
 
-enum  BCErrCode {
-    BCSuccess           = 0,    /**< 成功    */
+typedef NS_ENUM(NSInteger, BCErrCode) {
+    BCErrCodeSuccess    = 0,    /**< 成功    */
     BCErrCodeCommon     = -1,   /**< 参数错误类型    */
     BCErrCodeUserCancel = -2,   /**< 用户点击取消并返回    */
     BCErrCodeSentFail   = -3,   /**< 发送失败    */

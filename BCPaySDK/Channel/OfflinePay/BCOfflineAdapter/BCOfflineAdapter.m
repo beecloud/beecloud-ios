@@ -34,7 +34,7 @@
     
     NSString *cType = [BCPayUtil getChannelString:req.channel];
     
-    NSMutableDictionary *parameters = [BCPayUtil prepareParametersForPay];
+    NSMutableDictionary *parameters = [BCPayUtil prepareParametersForRequest];
     if (parameters == nil) {
         [self doErrorResponse:@"请检查是否全局初始化"];
         return;
@@ -67,13 +67,12 @@
               NSDictionary *source = (NSDictionary *)response;
               BCPayLog(@"channel=%@,resp=%@", cType, response);
               BCOfflinePayResp *resp = (BCOfflinePayResp *)[BCPayCache sharedInstance].bcResp;
-              resp.resultCode = [[source objectForKey:kKeyResponseResultCode] intValue];
-              resp.resultMsg = [source objectForKey:kKeyResponseResultMsg];
-              resp.errDetail = [source objectForKey:kKeyResponseErrDetail];
-              resp.request = req;
+              resp.resultCode = [source integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
+              resp.resultMsg = [source stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
+              resp.errDetail = [source stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
               if (resp.resultCode == 0) {
                   if (req.channel == PayChannelAliOfflineQrCode || req.channel == PayChannelWxNative) {
-                      resp.codeurl = [source objectForKey:kKeyResponseCodeUrl];
+                      resp.codeurl = [source stringValueForKey:kKeyResponseCodeUrl defaultValue:@""];
                   }
               }
               [BCPayCache beeCloudDoResponse];
@@ -98,7 +97,7 @@
     
     NSString *cType = [BCPayUtil getChannelString:req.channel];
     
-    NSMutableDictionary *parameters = [BCPayUtil prepareParametersForPay];
+    NSMutableDictionary *parameters = [BCPayUtil prepareParametersForRequest];
     if (parameters == nil) {
         [self doErrorResponse:@"请检查是否全局初始化"];
         return;
@@ -114,12 +113,11 @@
               
               BCPayLog(@"channel=%@,resp=%@", cType, response);
               BCOfflineStatusResp *resp = (BCOfflineStatusResp *)[BCPayCache sharedInstance].bcResp;
-              resp.resultCode = [[response objectForKey:kKeyResponseResultCode] intValue];
-              resp.resultMsg = [response objectForKey:kKeyResponseResultMsg];
-              resp.errDetail = [response objectForKey:kKeyResponseErrDetail];
-              resp.request = req;
+              resp.resultCode = [response integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
+              resp.resultMsg = [response stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
+              resp.errDetail = [response stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
               if (resp.resultCode == 0) {
-                resp.payResult = [[response objectForKey:KKeyResponsePayResult] boolValue];
+                  resp.payResult = [response boolValueForKey:KKeyResponsePayResult defaultValue:NO];
               }
               [BCPayCache beeCloudDoResponse];
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -135,14 +133,14 @@
     if (req == nil) {
         [self doErrorResponse:@"请求结构体不合法"];
         return;
-    } else if (!req.billno.isValid || !req.billno.isValidTraceNo || (req.billno.length < 8) || (req.billno.length > 32)) {
+    } else if (!req.billNo.isValid || !req.billNo.isValidTraceNo || (req.billNo.length < 8) || (req.billNo.length > 32)) {
         [self doErrorResponse:@"billno 必须是长度8~32位字母和/或数字组合成的字符串"];
         return;
     }
     
     NSString *cType = [BCPayUtil getChannelString:req.channel];
     
-    NSMutableDictionary *parameters = [BCPayUtil prepareParametersForPay];
+    NSMutableDictionary *parameters = [BCPayUtil prepareParametersForRequest];
     if (parameters == nil) {
         [self doErrorResponse:@"请检查是否全局初始化"];
         return;
@@ -153,17 +151,16 @@
     
     AFHTTPRequestOperationManager *manager = [BCPayUtil getAFHTTPRequestOperationManager];
     __weak BCOfflineAdapter *weakSelf = [BCOfflineAdapter sharedInstance];
-    [manager POST:[[BCPayUtil getBestHostWithFormat:kRestApiOfflineBillRevert] stringByAppendingString:req.billno] parameters:parameters
+    [manager POST:[[BCPayUtil getBestHostWithFormat:kRestApiOfflineBillRevert] stringByAppendingString:req.billNo] parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id response) {
-              
+    
               BCPayLog(@"channel=%@,resp=%@", cType, response);
               BCOfflineRevertResp *resp = (BCOfflineRevertResp *)[BCPayCache sharedInstance].bcResp;
-              resp.resultCode = [[response objectForKey:kKeyResponseResultCode] intValue];
-              resp.resultMsg = [response objectForKey:kKeyResponseResultMsg];
-              resp.errDetail = [response objectForKey:kKeyResponseErrDetail];
-              resp.request = req;
+              resp.resultCode = [response integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
+              resp.resultMsg = [response stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
+              resp.errDetail = [response stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
               if (resp.resultCode == 0) {
-                    resp.revertStatus = [[response objectForKey:kKeyResponseRevertResult] boolValue];
+                  resp.revertStatus = [response boolValueForKey:kKeyResponseRevertResult defaultValue:NO];
               }
               [BCPayCache beeCloudDoResponse];
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

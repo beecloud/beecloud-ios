@@ -38,17 +38,17 @@
     return [WXApi isWXAppInstalled];
 }
 
-- (void)wxPay:(NSMutableDictionary *)dic {
+- (BOOL)wxPay:(NSMutableDictionary *)dic {
     
     PayReq *request = [[PayReq alloc] init];
-    request.partnerId = [dic objectForKey:@"partner_id"];
-    request.prepayId = [dic objectForKey:@"prepay_id"];
-    request.package = [dic objectForKey:@"package"];
-    request.nonceStr = [dic objectForKey:@"nonce_str"];
-    NSMutableString *time = [dic objectForKey:@"timestamp"];
+    request.partnerId = [dic stringValueForKey:@"partner_id" defaultValue:@""];
+    request.prepayId = [dic stringValueForKey:@"prepay_id" defaultValue:@""];
+    request.package = [dic stringValueForKey:@"package" defaultValue:@""];
+    request.nonceStr = [dic stringValueForKey:@"nonce_str" defaultValue:@""];
+    NSString *time = [dic stringValueForKey:@"timestamp" defaultValue:@""];
     request.timeStamp = time.intValue;
-    request.sign = [dic objectForKey:@"pay_sign"];
-    [WXApi sendReq:request];
+    request.sign = [dic stringValueForKey:@"pay_sign" defaultValue:@""];
+    return [WXApi sendReq:request];
 }
 
 #pragma mark - Implementation WXApiDelegate
@@ -62,7 +62,7 @@
         switch (tempResp.errCode) {
             case WXSuccess:
                 strMsg = @"支付成功";
-                errcode = BCSuccess;
+                errcode = BCErrCodeSuccess;
                 break;
             case WXErrCodeUserCancel:
                 strMsg = @"支付取消";

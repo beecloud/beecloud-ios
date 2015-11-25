@@ -20,12 +20,13 @@
 - (void)registerPayPal:(NSString *)clientID secret:(NSString *)secret sanBox:(BOOL)isSandBox;
 - (BOOL)handleOpenUrl:(NSURL *)url;
 
-- (void)wxPay:(NSMutableDictionary *)dic;
-- (void)aliPay:(NSMutableDictionary *)dic;
-- (void)unionPay:(NSMutableDictionary *)dic;
+- (BOOL)wxPay:(NSMutableDictionary *)dic;
+- (BOOL)aliPay:(NSMutableDictionary *)dic;
+- (BOOL)unionPay:(NSMutableDictionary *)dic;
+- (NSString *)baiduPay:(NSMutableDictionary *)dic;
+
 - (void)payPal:(NSMutableDictionary *)dic;
 - (void)payPalVerify:(NSMutableDictionary *)dic;
-- (void)baiduPay:(NSMutableDictionary *)dic;
 
 - (void)offlinePay:(NSMutableDictionary *)dic;
 - (void)offlineStatus:(NSMutableDictionary *)dic;

@@ -50,13 +50,13 @@
         }
         BCQueryBillResult *result = (BCQueryBillResult *)[self.dataList objectAtIndex:indexPath.row];
         
-        cellString = [NSString stringWithFormat:@"订单标题:%@\n渠道:%@     金额:%ld\n交易时间:%@\n交易订单号:%@\n交易状态:%@\n,是否撤销:%@,optional:%@", result.title, result.channel, (long)result.totalFee,[BCPayUtil millisecondToDateString:result.createTime],result.billNo,result.spayResult?@"成功":@"失败",result.revertResult?@"是":@"否",result.optional];
+        cellString = [NSString stringWithFormat:@"订单标题:%@\n渠道:%@     金额:%ld\n交易时间:%@\n交易订单号:%@\n交易状态:%@\n,是否撤销:%@,optional:%@", result.title, result.subChannel, (long)result.totalFee,[BCPayUtil millisecondToDateString:result.createTime],result.billNo,result.payResult?@"成功":@"失败",result.revertResult?@"是":@"否",result.optional];
         
     } else if ([[self.dataList objectAtIndex:indexPath.row] isKindOfClass:[BCQueryRefundResult class]]) {
        
         BCQueryRefundResult *result = (BCQueryRefundResult *)[self.dataList objectAtIndex:indexPath.row];
         
-        cellString = [NSString stringWithFormat:@"订单标题:%@\n渠道:%@\n总金额:%ld 退款金额:%ld\n交易时间:%@\n交易订单号:%@\n退款单号:%@\n退款是否成功状态:%@\n退款是否完成:%@", result.title,result.channel, (long)result.totalFee, (long)result.refundFee,[BCPayUtil millisecondToDateString:result.createTime],result.billNo,result.refundNo, result.result?@"成功":@"失败",result.finish?@"完成":@"未完成"];
+        cellString = [NSString stringWithFormat:@"订单标题:%@\n渠道:%@\n总金额:%ld 退款金额:%ld\n交易时间:%@\n交易订单号:%@\n退款单号:%@\n退款是否成功状态:%@\n退款是否完成:%@", result.title,result.subChannel, (long)result.totalFee, (long)result.refundFee,[BCPayUtil millisecondToDateString:result.createTime],result.billNo,result.refundNo, result.result?@"成功":@"失败",result.finish?@"完成":@"未完成"];
     }
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.text = cellString;

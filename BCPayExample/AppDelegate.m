@@ -33,4 +33,11 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    if (![BeeCloud handleOpenUrl:url]) {
+        //handle其他类型的url
+    }
+    return YES;
+}
+
 @end
