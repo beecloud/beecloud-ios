@@ -22,10 +22,6 @@
         instance.appSecret = nil;
         instance.sandbox = NO;
         
-        instance.payPalClientID = nil;
-        instance.payPalSecret = nil;
-        instance.isPayPalSandbox = NO;
-        
         instance.bcResp = [[BCBaseResp alloc] init];
         
         instance.networkTimeout = 5.0;

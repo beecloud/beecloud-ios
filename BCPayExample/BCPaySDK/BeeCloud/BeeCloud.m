@@ -60,20 +60,6 @@
     return [BeeCloudAdapter beeCloudRegisterWeChat:wxAppID];
 }
 
-+ (BOOL)initPayPal:(NSString *)clientID secret:(NSString *)secret sandbox:(BOOL)isSandbox {
-    
-    if(clientID.isValid && secret.isValid) {
-        BCPayCache *instance = [BCPayCache sharedInstance];
-        instance.payPalClientID = clientID;
-        instance.payPalSecret = secret;
-        instance.isPayPalSandbox = isSandbox;
-        
-        [BeeCloudAdapter beeCloudRegisterPayPal:clientID secret:secret sandbox:isSandbox];
-        return YES;
-    }
-    return NO;
-}
-
 + (void)setBeeCloudDelegate:(id<BeeCloudDelegate>)delegate {
     [BeeCloud sharedInstance].delegate = delegate;
 }
@@ -144,12 +130,6 @@
             break;
         case BCObjsTypeRefundStatusReq://查询退款状态，目前只支持微信、百度
             [instance reqRefundStatus:(BCRefundStatusReq *)req];
-            break;
-        case BCObjsTypePayPal:
-            [instance  reqPayPal:(BCPayPalReq *)req];
-            break;
-        case BCObjsTypePayPalVerify:
-            [instance reqPayPalVerify:(BCPayPalVerifyReq *)req];
             break;
         case BCObjsTypeOfflinePayReq:
             [instance reqOfflinePay:req];

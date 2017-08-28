@@ -43,10 +43,6 @@ static NSString * const kRestApiOfflinePay = @"%@%@/offline/bill";
 static NSString * const kRestApiOfflineBillStatus = @"%@%@/offline/bill/status";
 static NSString * const kRestApiOfflineBillRevert = @"%@%@/offline/bill/";
 
-//paypal accesstoken
-static NSString * const kPayPalAccessTokenProduction = @"https://api.paypal.com/v1/oauth2/token";
-static NSString * const kPayPalAccessTokenSandbox = @"https://api.sandbox.paypal.com/v1/oauth2/token";
-
 //sandbox
 static NSString * const kRestApiSandboxNotify = @"%@%@/notify/";
 
@@ -55,7 +51,6 @@ static NSString * const kAdapterWXPay = @"WXPayAdapter";
 static NSString * const kAdapterAliPay = @"AliPayAdapter";
 static NSString * const kAdapterUnionPay = @"UnionPayAdapter";
 static NSString * const kAdapterApplePay = @"ApplePayAdapter";
-static NSString * const kAdapterPayPal = @"PayPalAdapter";
 static NSString * const kAdapterOffline = @"OfflineAdapter";
 static NSString * const kAdapterBaidu = @"BaiduAdapter";
 static NSString * const kAdapterSandbox = @"BCSandboxAdapter";
@@ -114,10 +109,6 @@ typedef NS_ENUM(NSInteger, PayChannel) {
     PayChannelApplePay,
     PayChannelApplePayTest,
     
-    PayChannelPayPal = 40,
-    PayChannelPayPalLive,
-    PayChannelPayPalSandbox,
-    
     PayChannelBaidu = 50,
     PayChannelBaiduApp,
     PayChannelBaiduWeb,
@@ -164,11 +155,7 @@ typedef NS_ENUM(NSInteger, BCObjsType) {
     
     BCObjsTypeBaseResults = 300,
     BCObjsTypeBillResults,
-    BCObjsTypeRefundResults,
-    
-    BCObjsTypePayPal = 400,
-    BCObjsTypePayPalVerify,
-    
+    BCObjsTypeRefundResults
 };
 
 typedef NS_ENUM(NSUInteger, BillStatus) {

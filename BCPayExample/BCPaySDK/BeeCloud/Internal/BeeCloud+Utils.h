@@ -46,20 +46,6 @@
 - (void)reqOfflineBillRevert:(id)req;
 
 /**
- *  PayPal支付
- *
- *  @param req PayPal支付请求
- */
-- (void)reqPayPal:(BCPayPalReq *)req;
-
-/**
- *  PayPal验证
- *
- *  @param req PayPal验证请求
- */
-- (void)reqPayPalVerify:(BCPayPalVerifyReq *)req;
-
-/**
  *  查询支付订单
  *
  *  @param req 查询订单请求

@@ -13,7 +13,6 @@
 
 + (BOOL)beeCloudRegisterWeChat:(NSString *)appid;
 + (BOOL)beeCloudIsWXAppInstalled;
-+ (void)beeCloudRegisterPayPal:(NSString *)clientID secret:(NSString *)secret sandbox:(BOOL)isSandbox;
 + (BOOL)beeCloud:(NSString *)object handleOpenUrl:(NSURL *)url;
 
 + (BOOL)beeCloudWXPay:(NSMutableDictionary *)dic;
@@ -24,8 +23,6 @@
 + (BOOL)beecloudSandboxPay;
 + (BOOL)beecloudCanMakeApplePayments:(NSUInteger)cardType;
 
-+ (void)beeCloudPayPal:(NSMutableDictionary *)dic;
-+ (void)beeCloudPayPalVerify:(NSMutableDictionary *)dic;
 + (void)beeCloudOfflinePay:(NSMutableDictionary *)dic;
 + (void)beeCloudOfflineStatus:(NSMutableDictionary *)dic;
 + (void)beeCloudOfflineRevert:(NSMutableDictionary *)dic;

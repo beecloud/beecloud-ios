@@ -43,9 +43,6 @@
 #import "BCQueryBillResult.h"
 #import "BCQueryRefundResult.h"
 
-#import "BCPayPalReq.h"
-#import "BCPayPalVerifyReq.h"
-
 #import "BCCategory.h"
 #import "BCSubscription.h"
 #import "BCAuthReq.h"

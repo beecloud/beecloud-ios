@@ -52,8 +52,6 @@
 		36B3E06B1EC464370032CBF3 /* BCBaseResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B3DFD21EC464370032CBF3 /* BCBaseResp.m */; };
 		36B3E06C1EC464370032CBF3 /* BCPayReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B3DFD51EC464370032CBF3 /* BCPayReq.m */; };
 		36B3E06D1EC464370032CBF3 /* BCPayResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B3DFD71EC464370032CBF3 /* BCPayResp.m */; };
-		36B3E06E1EC464370032CBF3 /* BCPayPalReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B3DFDA1EC464370032CBF3 /* BCPayPalReq.m */; };
-		36B3E06F1EC464370032CBF3 /* BCPayPalVerifyReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B3DFDC1EC464370032CBF3 /* BCPayPalVerifyReq.m */; };
 		36B3E0701EC464370032CBF3 /* BCPreRefundReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B3DFDF1EC464370032CBF3 /* BCPreRefundReq.m */; };
 		36B3E0711EC464370032CBF3 /* BCPreRefundResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B3DFE11EC464370032CBF3 /* BCPreRefundResp.m */; };
 		36B3E0721EC464370032CBF3 /* BCQueryBillByIdReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B3DFE41EC464370032CBF3 /* BCQueryBillByIdReq.m */; };
@@ -210,10 +208,6 @@
 		36B3DFD51EC464370032CBF3 /* BCPayReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayReq.m; sourceTree = "<group>"; };
 		36B3DFD61EC464370032CBF3 /* BCPayResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayResp.h; sourceTree = "<group>"; };
 		36B3DFD71EC464370032CBF3 /* BCPayResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayResp.m; sourceTree = "<group>"; };
-		36B3DFD91EC464370032CBF3 /* BCPayPalReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayPalReq.h; sourceTree = "<group>"; };
-		36B3DFDA1EC464370032CBF3 /* BCPayPalReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayPalReq.m; sourceTree = "<group>"; };
-		36B3DFDB1EC464370032CBF3 /* BCPayPalVerifyReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayPalVerifyReq.h; sourceTree = "<group>"; };
-		36B3DFDC1EC464370032CBF3 /* BCPayPalVerifyReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayPalVerifyReq.m; sourceTree = "<group>"; };
 		36B3DFDE1EC464370032CBF3 /* BCPreRefundReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPreRefundReq.h; sourceTree = "<group>"; };
 		36B3DFDF1EC464370032CBF3 /* BCPreRefundReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPreRefundReq.m; sourceTree = "<group>"; };
 		36B3DFE01EC464370032CBF3 /* BCPreRefundResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPreRefundResp.h; sourceTree = "<group>"; };
@@ -541,7 +535,6 @@
 				36B3DFCB1EC464370032CBF3 /* BCAuth */,
 				36B3DFCE1EC464370032CBF3 /* BCBase */,
 				36B3DFD31EC464370032CBF3 /* BCPay */,
-				36B3DFD81EC464370032CBF3 /* BCPayPal */,
 				36B3DFDD1EC464370032CBF3 /* BCPreRefund */,
 				36B3DFE21EC464370032CBF3 /* BCQueryBillById */,
 				36B3DFE71EC464370032CBF3 /* BCQueryBills */,
@@ -585,17 +578,6 @@
 				36B3DFD71EC464370032CBF3 /* BCPayResp.m */,
 			);
 			path = BCPay;
-			sourceTree = "<group>";
-		};
-		36B3DFD81EC464370032CBF3 /* BCPayPal */ = {
-			isa = PBXGroup;
-			children = (
-				36B3DFD91EC464370032CBF3 /* BCPayPalReq.h */,
-				36B3DFDA1EC464370032CBF3 /* BCPayPalReq.m */,
-				36B3DFDB1EC464370032CBF3 /* BCPayPalVerifyReq.h */,
-				36B3DFDC1EC464370032CBF3 /* BCPayPalVerifyReq.m */,
-			);
-			path = BCPayPal;
 			sourceTree = "<group>";
 		};
 		36B3DFDD1EC464370032CBF3 /* BCPreRefund */ = {
@@ -1072,8 +1054,6 @@
 				369750291B68C659009FAEDB /* AppDelegate.m in Sources */,
 				36B3E0861EC464370032CBF3 /* BCNetworkHelper.m in Sources */,
 				36B3E09B1EC464370032CBF3 /* BCOfflinePayReq.m in Sources */,
-				36B3E06F1EC464370032CBF3 /* BCPayPalVerifyReq.m in Sources */,
-				36B3E06E1EC464370032CBF3 /* BCPayPalReq.m in Sources */,
 				36B3E0781EC464370032CBF3 /* BCQueryRefundByIdReq.m in Sources */,
 				3697504C1B68C6D5009FAEDB /* GuideViewController.m in Sources */,
 				36B3E0701EC464370032CBF3 /* BCPreRefundReq.m in Sources */,

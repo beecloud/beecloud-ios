@@ -41,7 +41,7 @@
  */
 @property (nonatomic, assign) long long  createTime;
 /**
- *  支付主渠道(WX、ALI、UN、BD、PAYPAL),具体参考Enum PayChannel
+ *  支付主渠道(WX、ALI、UN、BD),具体参考Enum PayChannel
  */
 @property (nonatomic, retain) NSString  *channel;
 /**

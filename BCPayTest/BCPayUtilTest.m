@@ -111,10 +111,6 @@
     XCTAssertEqualObjects(@"BD_WEB", [BCPayUtil getChannelString:PayChannelBaiduWeb]);
     XCTAssertEqualObjects(@"BD_WAP", [BCPayUtil getChannelString:PayChannelBaiduWap]);
     
-    XCTAssertEqualObjects(@"PAYPAL", [BCPayUtil getChannelString:PayChannelPayPal]);
-    XCTAssertEqualObjects(@"PAYPAL_LIVE", [BCPayUtil getChannelString:PayChannelPayPalLive]);
-    XCTAssertEqualObjects(@"PAYPAL_SANDBOX", [BCPayUtil getChannelString:PayChannelPayPalSandbox]);
-    
     XCTAssertEqualObjects(@"", [BCPayUtil getChannelString:60]);
 }
 

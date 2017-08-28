@@ -1,7 +1,4 @@
 
-/* Class = "UILabel"; text = "PayPal"; ObjectID = "1rt-Y2-0Ek"; */
-"1rt-Y2-0Ek.text" = "PayPal";
-
 /* Class = "UIButton"; normalTitle = "查询支付订单"; ObjectID = "24I-1V-Aps"; */
 "24I-1V-Aps.normalTitle" = "查询支付订单";
 
