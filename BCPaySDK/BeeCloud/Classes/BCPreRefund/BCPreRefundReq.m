@@ -50,22 +50,19 @@
     
     parameters[@"need_approval"] = @(YES);
     
-    BCHTTPSessionManager *manager = [BCPayUtil getBCHTTPSessionManager];
-    
-    [manager POST:[BCPayUtil getBestHostWithFormat:kRestApiRefund] parameters:parameters progress:nil
-          success:^(NSURLSessionTask *task, id response) {
-              if ([response integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon] != 0) {
-                  [BCPayUtil getErrorInResponse:(NSDictionary *)response];
-              } else {
-                  [BCPayCache sharedInstance].bcResp.bcId = [(NSDictionary *)response stringValueForKey:@"id" defaultValue:@""];
-                  [BCPayCache sharedInstance].bcResp.resultCode = [response integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
-                  [BCPayCache sharedInstance].bcResp.resultMsg = [response stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
-                  [BCPayCache sharedInstance].bcResp.errDetail = [response stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
-                  [BCPayCache beeCloudDoResponse];
-              }
-          } failure:^(NSURLSessionTask *operation, NSError *error) {
-              [BCPayUtil doErrorResponse:kNetWorkError];
-          }];
+    [BCNetworkHelper postWithUrlString:[BCPayUtil getBestHostWithFormat:kRestApiRefund] parameters:parameters success:^(NSDictionary *response) {
+        if ([response integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon] != 0) {
+            [BCPayUtil getErrorInResponse:(NSDictionary *)response];
+        } else {
+            [BCPayCache sharedInstance].bcResp.bcId = [(NSDictionary *)response stringValueForKey:@"id" defaultValue:@""];
+            [BCPayCache sharedInstance].bcResp.resultCode = [response integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
+            [BCPayCache sharedInstance].bcResp.resultMsg = [response stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
+            [BCPayCache sharedInstance].bcResp.errDetail = [response stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
+            [BCPayCache beeCloudDoResponse];
+        }
+    } failure:^(NSError *error) {
+        [BCPayUtil doErrorResponse:kNetWorkError];
+    }];
 
 }
 

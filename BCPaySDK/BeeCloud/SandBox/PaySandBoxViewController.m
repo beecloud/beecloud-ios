@@ -180,9 +180,9 @@
     NSLog(@"sandboxPay id = %@", [BCPayCache sharedInstance].bcResp.bcId);
     
     __weak PaySandboxViewController *weakSelf = self;
-    [BCNetworkHelper getWithUrlString:host parameters:nil success:^(NSDictionary *data) {
-        BCPayLog(@"resp = %@", data);
-        [weakSelf doNotifyResponse:(NSDictionary *)data];
+    [BCNetworkHelper getWithUrlString:host parameters:nil success:^(NSDictionary *response) {
+        BCPayLog(@"resp = %@", response);
+        [weakSelf doNotifyResponse:(NSDictionary *)response];
     } failure:^(NSError *error) {
         [loading stopAnimating];
         [BCPayUtil doErrorResponse:kNetWorkError];

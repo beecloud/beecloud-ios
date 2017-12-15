@@ -80,14 +80,4 @@
     [BeeCloudAdapter beeCloudOfflineRevert:[NSMutableDictionary dictionaryWithObjectsAndKeys:req, kAdapterOffline, nil]];
 }
 
-#pragma mark PayPal
-
-- (void)reqPayPal:(BCPayPalReq *)req {
-    [BeeCloudAdapter beeCloudPayPal:[NSMutableDictionary dictionaryWithObjectsAndKeys:req, kAdapterPayPal,nil]];
-}
-
-- (void)reqPayPalVerify:(BCPayPalVerifyReq *)req {
-    [BeeCloudAdapter beeCloudPayPalVerify:[NSMutableDictionary dictionaryWithObjectsAndKeys:req, kAdapterPayPal, nil]];
-}
-
 @end

@@ -154,16 +154,6 @@
         case PayChannelApplePayTest:
             cType = @"APPLE_TEST";
             break;
-#pragma mark PayChannel_PayPal
-        case PayChannelPayPal:
-            cType = @"PAYPAL";
-            break;
-        case PayChannelPayPalLive:
-            cType = @"PAYPAL_LIVE";
-            break;
-        case PayChannelPayPalSandbox:
-            cType = @"PAYPAL_SANDBOX";
-            break;
 #pragma mark PayChannel_Baidu
         case PayChannelBaidu:
             cType = @"BD";

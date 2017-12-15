@@ -46,14 +46,13 @@
     NSString *preHost = [BCPayUtil getBestHostWithFormat:kRestApiQueryBillById];
     NSString *host = [NSString stringWithFormat:@"%@%@", preHost, self.objectId];
     
-    BCHTTPSessionManager *manager = [BCPayUtil getBCHTTPSessionManager];
+    
     __weak BCQueryBillByIdReq *weakSelf = self;
-    [manager GET:host parameters:preparepara progress:nil
-         success:^(NSURLSessionTask *task, id response) {
-             [weakSelf doQueryBillByIdResponse:(NSDictionary *)response];
-         } failure:^(NSURLSessionTask *operation, NSError *error) {
-             [BCPayUtil doErrorResponse:kNetWorkError];
-         }];
+    [BCNetworkHelper getWithUrlString:host parameters:preparepara success:^(NSDictionary *response) {
+        [weakSelf doQueryBillByIdResponse:(NSDictionary *)response];
+    } failure:^(NSError *error) {
+        [BCPayUtil doErrorResponse:kNetWorkError];
+    }];
 }
 
 - (BCQueryBillByIdResp *)doQueryBillByIdResponse:(NSDictionary *)response {

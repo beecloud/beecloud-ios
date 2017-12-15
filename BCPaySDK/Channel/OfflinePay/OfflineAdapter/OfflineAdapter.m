@@ -60,31 +60,29 @@
         parameters[@"optional"] = req.optional;
     }
     
-    BCHTTPSessionManager *manager = [BCPayUtil getBCHTTPSessionManager];
+    
     __weak OfflineAdapter *weakSelf = [OfflineAdapter sharedInstance];
     NSString *host = [BCPayUtil getBestHostWithFormat:kRestApiOfflinePay];
     if(req.channel == PayChannelBCNative) {
         host = [BCPayUtil getBestHostWithFormat:kRestApiPay];
     }
-    [manager POST:host parameters:parameters progress:nil
-          success:^(NSURLSessionTask *task, id response) {
-              
-              NSDictionary *source = (NSDictionary *)response;
-              BCPayLog(@"channel=%@,resp=%@", cType, response);
-              BCOfflinePayResp *resp = (BCOfflinePayResp *)[BCPayCache sharedInstance].bcResp;
-              resp.resultCode = [source integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
-              resp.resultMsg = [source stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
-              resp.errDetail = [source stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
-              if (resp.resultCode == 0) {
-                  if (req.channel == PayChannelAliOfflineQrcode || req.channel == PayChannelWxNative || req.channel == PayChannelBCAliQrcode || req.channel == PayChannelBCNative) {
-                      resp.codeurl = [source stringValueForKey:kKeyResponseCodeUrl defaultValue:@""];
-                  }
-              }
-              [BCPayCache beeCloudDoResponse];
-              
-          } failure:^(NSURLSessionTask *operation, NSError *error) {
-              [weakSelf doErrorResponse:kNetWorkError];
-          }];
+   
+    [BCNetworkHelper postWithUrlString:host parameters:parameters success:^(NSDictionary *data) {
+        NSDictionary *source = (NSDictionary *)data;
+        BCPayLog(@"channel=%@,resp=%@", cType, data);
+        BCOfflinePayResp *resp = (BCOfflinePayResp *)[BCPayCache sharedInstance].bcResp;
+        resp.resultCode = [source integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
+        resp.resultMsg = [source stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
+        resp.errDetail = [source stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
+        if (resp.resultCode == 0) {
+            if (req.channel == PayChannelAliOfflineQrcode || req.channel == PayChannelWxNative || req.channel == PayChannelBCAliQrcode || req.channel == PayChannelBCNative) {
+                resp.codeurl = [source stringValueForKey:kKeyResponseCodeUrl defaultValue:@""];
+            }
+        }
+        [BCPayCache beeCloudDoResponse];
+    } failure:^(NSError *error) {
+        [weakSelf doErrorResponse:kNetWorkError];
+    }];
 }
 
 #pragma mark - OffLine BillStatus
@@ -111,23 +109,20 @@
     parameters[@"channel"] = cType;
     parameters[@"bill_no"] = req.billNo;
     
-    BCHTTPSessionManager *manager = [BCPayUtil getBCHTTPSessionManager];
     __weak OfflineAdapter *weakSelf = [OfflineAdapter sharedInstance];
-    [manager POST:[BCPayUtil getBestHostWithFormat:kRestApiOfflineBillStatus] parameters:parameters progress:nil
-          success:^(NSURLSessionTask *operation, id response) {
-              
-              BCPayLog(@"channel=%@,resp=%@", cType, response);
-              BCOfflineStatusResp *resp = (BCOfflineStatusResp *)[BCPayCache sharedInstance].bcResp;
-              resp.resultCode = [response integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
-              resp.resultMsg = [response stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
-              resp.errDetail = [response stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
-              if (resp.resultCode == 0) {
-                  resp.payResult = [response boolValueForKey:KKeyResponsePayResult defaultValue:NO];
-              }
-              [BCPayCache beeCloudDoResponse];
-          } failure:^(NSURLSessionTask *operation, NSError *error) {
-              [weakSelf doErrorResponse:kNetWorkError];
-          }];
+    [BCNetworkHelper postWithUrlString:[BCPayUtil getBestHostWithFormat:kRestApiOfflineBillStatus] parameters:parameters success:^(NSDictionary *response) {
+        BCPayLog(@"channel=%@,resp=%@", cType, response);
+        BCOfflineStatusResp *resp = (BCOfflineStatusResp *)[BCPayCache sharedInstance].bcResp;
+        resp.resultCode = [response integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
+        resp.resultMsg = [response stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
+        resp.errDetail = [response stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
+        if (resp.resultCode == 0) {
+            resp.payResult = [response boolValueForKey:KKeyResponsePayResult defaultValue:NO];
+        }
+        [BCPayCache beeCloudDoResponse];
+    } failure:^(NSError *error) {
+        [weakSelf doErrorResponse:kNetWorkError];
+    }];
 }
 
 #pragma mark - OffLine BillRevert
@@ -154,23 +149,20 @@
     parameters[@"channel"] = cType;
     parameters[@"method"] = @"REVERT";
     
-    BCHTTPSessionManager *manager = [BCPayUtil getBCHTTPSessionManager];
     __weak OfflineAdapter *weakSelf = [OfflineAdapter sharedInstance];
-    [manager POST:[[BCPayUtil getBestHostWithFormat:kRestApiOfflineBillRevert] stringByAppendingString:req.billNo] parameters:parameters progress:nil
-          success:^(NSURLSessionTask *operation, id response) {
-    
-              BCPayLog(@"channel=%@,resp=%@", cType, response);
-              BCOfflineRevertResp *resp = (BCOfflineRevertResp *)[BCPayCache sharedInstance].bcResp;
-              resp.resultCode = [response integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
-              resp.resultMsg = [response stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
-              resp.errDetail = [response stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
-              if (resp.resultCode == 0) {
-                  resp.revertStatus = [response boolValueForKey:kKeyResponseRevertResult defaultValue:NO];
-              }
-              [BCPayCache beeCloudDoResponse];
-          } failure:^(NSURLSessionTask *operation, NSError *error) {
-              [weakSelf doErrorResponse:kNetWorkError];
-          }];
+    [BCNetworkHelper postWithUrlString:[[BCPayUtil getBestHostWithFormat:kRestApiOfflineBillRevert] stringByAppendingString:req.billNo] parameters:parameters success:^(NSDictionary *response) {
+        BCPayLog(@"channel=%@,resp=%@", cType, response);
+        BCOfflineRevertResp *resp = (BCOfflineRevertResp *)[BCPayCache sharedInstance].bcResp;
+        resp.resultCode = [response integerValueForKey:kKeyResponseResultCode defaultValue:BCErrCodeCommon];
+        resp.resultMsg = [response stringValueForKey:kKeyResponseResultMsg defaultValue:kUnknownError];
+        resp.errDetail = [response stringValueForKey:kKeyResponseErrDetail defaultValue:kUnknownError];
+        if (resp.resultCode == 0) {
+            resp.revertStatus = [response boolValueForKey:kKeyResponseRevertResult defaultValue:NO];
+        }
+        [BCPayCache beeCloudDoResponse];
+    } failure:^(NSError *error) {
+        [weakSelf doErrorResponse:kNetWorkError];
+    }];
 }
 
 - (BOOL)checkParameters:(BCBaseReq *)request {

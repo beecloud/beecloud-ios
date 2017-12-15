@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^CompletioBlock)(NSDictionary *dic, NSURLResponse *response, NSError *error);
-typedef void (^SuccessBlock)(NSDictionary *data);
+typedef void (^SuccessBlock)(NSDictionary *response);
 typedef void (^FailureBlock)(NSError *error);
 
 @interface BCNetworkHelper : NSObject
@@ -23,5 +23,7 @@ typedef void (^FailureBlock)(NSError *error);
  * post请求
  */
 + (void)postWithUrlString:(NSString *)url parameters:(id)parameters success:(SuccessBlock)successBlock failure:(FailureBlock)failureBlock;
+
++ (void)putWithUrlString:(NSString *)url parameters:(id)parameters success:(SuccessBlock)successBlock failure:(FailureBlock)failureBlock;
 
 @end

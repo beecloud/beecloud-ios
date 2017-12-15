@@ -28,13 +28,6 @@
     return NO;
 }
 
-+ (void)beeCloudRegisterPayPal:(NSString *)clientID secret:(NSString *)secret sandbox:(BOOL)isSandbox {
-    id adapter = [[NSClassFromString(kAdapterPayPal) alloc] init];
-    if (adapter && [adapter respondsToSelector:@selector(registerPayPal:secret:sandbox:)]) {
-        [adapter registerPayPal:clientID secret:secret sandbox:isSandbox];
-    }
-}
-
 + (BOOL)beeCloud:(NSString *)object handleOpenUrl:(NSURL *)url {
     id adapter = [[NSClassFromString(object) alloc] init];
     if (adapter && [adapter respondsToSelector:@selector(handleOpenUrl:)]) {
@@ -97,20 +90,6 @@
         return [adapter sandboxPay];
     }
     return NO;
-}
-
-+ (void)beeCloudPayPal:(NSMutableDictionary *)dic {
-    id adapter = [[NSClassFromString(kAdapterPayPal) alloc] init];
-    if (adapter && [adapter respondsToSelector:@selector(payPal:)]) {
-        [adapter payPal:dic];
-    }
-}
-
-+ (void)beeCloudPayPalVerify:(NSMutableDictionary *)dic {
-    id adapter = [[NSClassFromString(kAdapterPayPal) alloc] init];
-    if (adapter && [adapter respondsToSelector:@selector(payPalVerify:)]) {
-        [adapter payPalVerify:dic];
-    }
 }
 
 + (void)beeCloudOfflinePay:(NSMutableDictionary *)dic {

@@ -48,14 +48,11 @@
     parameters[@"name"] = self.name;
     parameters[@"id_no"] = self.idNo;
     
-    BCHTTPSessionManager *manager = [BCPayUtil getBCHTTPSessionManager];
-    
-    [manager POST:[NSString stringWithFormat:@"%@/2/auth", kBCHost] parameters:parameters progress:nil
-          success:^(NSURLSessionTask *task, id response) {
-              [BCPayUtil getErrorInResponse:(NSDictionary *)response];
-          } failure:^(NSURLSessionTask *operation, NSError *error) {
-              [BCPayUtil doErrorResponse:kNetWorkError];
-          }];
+    [BCNetworkHelper postWithUrlString:[NSString stringWithFormat:@"%@/2/auth", kBCHost] parameters:parameters success:^(NSDictionary *response) {
+        [BCPayUtil getErrorInResponse:(NSDictionary *)response];
+    } failure:^(NSError *error) {
+        [BCPayUtil doErrorResponse:kNetWorkError];
+    }];
     
 }
 

@@ -75,7 +75,6 @@
     }
     
     __weak BCSubscriptionQuery *weakself = self;
-    
     [BCNetworkHelper getWithUrlString:[NSString stringWithFormat:@"%@/subscription", subscription_host] parameters:params success:^(NSDictionary *data) {
         NSMutableDictionary *response = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary *)data];
         response[@"type"] = weakself.count_only?@(BCSubTypeSubscriptionsCount):@(BCSubTypeSubscriptions);

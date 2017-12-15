@@ -30,7 +30,6 @@
 
 - (void)newSubscription {
     NSMutableDictionary *params = [BCPayUtil prepareParametersForRequest];
-    BCHTTPSessionManager *manager = [BCPayUtil getBCHTTPSessionManager];
     
     if (self.buyer_id.isValid) {
         params[@"buyer_id"] = self.buyer_id;
@@ -65,15 +64,13 @@
     params[@"trial_end"] = @(self.trial_end);
     params[@"amount"] = @(self.amount);
     
-    [manager POST:@"https://apidynamic.beecloud.cn/2/subscription" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSMutableDictionary *response = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary *)responseObject];
-        response[@"type"] = @(BCSubTypeNewSubscription);
-        [BCSubscription doSubscriptionResponse:response];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    [BCNetworkHelper postWithUrlString:@"https://api.beecloud.cn/2/subscription" parameters:params success:^(NSDictionary *response) {
+        NSMutableDictionary *data = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary *)response];
+        data[@"type"] = @(BCSubTypeNewSubscription);
+        [BCSubscription doSubscriptionResponse:data];
+    } failure:^(NSError *error) {
         [BCSubscription doSubscriptionErrorResponse:kNetWorkError];
     }];
-    
-    
 
 }
 
