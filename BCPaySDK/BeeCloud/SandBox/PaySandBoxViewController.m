@@ -31,8 +31,9 @@
     BCPayReq *req = (BCPayReq *)[BCPayCache sharedInstance].bcResp.request;
     
     self.view.backgroundColor = [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1];
+    
+    statusStyle = [UIApplication sharedApplication].statusBarStyle;
     if ([UIApplication sharedApplication].statusBarStyle != UIStatusBarStyleLightContent) {
-        statusStyle = [UIApplication sharedApplication].statusBarStyle;
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     }
     
