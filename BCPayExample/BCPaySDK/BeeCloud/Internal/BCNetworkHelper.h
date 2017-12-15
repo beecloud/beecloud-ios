@@ -24,4 +24,6 @@ typedef void (^FailureBlock)(NSError *error);
  */
 + (void)postWithUrlString:(NSString *)url parameters:(id)parameters success:(SuccessBlock)successBlock failure:(FailureBlock)failureBlock;
 
++ (void)putWithUrlString:(NSString *)url parameters:(id)parameters success:(SuccessBlock)successBlock failure:(FailureBlock)failureBlock;
+
 @end

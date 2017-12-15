@@ -358,10 +358,6 @@
                 [self showScanViewController];
 #endif
                 break;
-            case PayChannelPayPal:
-            case PayChannelPayPalSandbox:
-//                [self doPayPal];
-                break;
             default:
                 break;
         }

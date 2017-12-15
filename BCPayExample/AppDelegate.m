@@ -37,10 +37,6 @@
     //初始化BC微信APP支付
 //    [BeeCloud initBCWXPay:@"wxf1aa465362b4c8f1"];
     
-    //初始化PayPal
-    [BeeCloud initPayPal:@"AVT1Ch18aTIlUJIeeCxvC7ZKQYHczGwiWm8jOwhrREc4a5FnbdwlqEB4evlHPXXUA67RAAZqZM0H8TCR"
-                  secret:@"EL-fkjkEUyxrwZAmrfn46awFXlX-h2nRkyCVhhpeVdlSRuhPJKXx3ZvUTTJqPQuAeomXA8PZ2MkX24vF"
-                 sandbox:YES];
     return YES;
 }
 
