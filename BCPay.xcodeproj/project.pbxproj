@@ -26,9 +26,7 @@
 		3606FCEF1D925E1400DFED02 /* BCOfflineStatusResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606FCBC1D925E1400DFED02 /* BCOfflineStatusResp.m */; };
 		3606FCF31D925E1400DFED02 /* UnionPayAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3606FCCD1D925E1400DFED02 /* UnionPayAdapter.m */; };
 		3606FCF51D925E1400DFED02 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3606FCD41D925E1400DFED02 /* libWeChatSDK.a */; };
-		360A449E1D61A5B800668FF5 /* SubscriptionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A449D1D61A5B800668FF5 /* SubscriptionListViewController.m */; };
 		360A44A01D61C06400668FF5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 36379D341BC66A0700CA6C81 /* libsqlite3.tbd */; };
-		360F492D1D52F45A00268F21 /* BCSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F492C1D52F45A00268F21 /* BCSubscription.m */; };
 		361778F51CB666D800C4CCB0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 361778F41CB666D800C4CCB0 /* CoreTelephony.framework */; };
 		3618770A1C2D134B00CE4AED /* BeeCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 361877091C2D134B00CE4AED /* BeeCloud.bundle */; };
 		362FC8EF1BF5DE5F007450FF /* XCTestCase+AsyncTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 362FC8E11BF5DE5F007450FF /* XCTestCase+AsyncTesting.m */; };
@@ -36,7 +34,6 @@
 		363464051C15842C00C724B2 /* PaySandBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363464031C15842C00C724B2 /* PaySandBoxViewController.m */; };
 		36379D371BC66A1300CA6C81 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 36379D361BC66A1300CA6C81 /* libc++.tbd */; };
 		36383E6D1D1D140E00CB6DBD /* BCPreRefundTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 36383E6C1D1D140E00CB6DBD /* BCPreRefundTest.m */; };
-		363AE73F1D546C55007AEE2F /* SubscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 363AE73E1D546C55007AEE2F /* SubscriptionViewController.m */; };
 		363B89391C97A79500DD2AB1 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3639726E1C7AB60300412108 /* PassKit.framework */; };
 		36501E2A1C06E87300BC8B8A /* BCBaseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E181C06E87300BC8B8A /* BCBaseResult.m */; };
 		36501E2B1C06E87300BC8B8A /* BCQueryBillResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E1A1C06E87300BC8B8A /* BCQueryBillResult.m */; };
@@ -62,9 +59,6 @@
 		36501E7A1C06FC5300BC8B8A /* BCBaseReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E771C06FC5300BC8B8A /* BCBaseReq.m */; };
 		36501E7B1C06FC5300BC8B8A /* BCBaseResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E791C06FC5300BC8B8A /* BCBaseResp.m */; };
 		3658B0021BB2A0DA00183C28 /* PayChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3658B0011BB2A0DA00183C28 /* PayChannelCell.m */; };
-		366807C11D5DA7180050C9BB /* NewSubscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 366807C01D5DA7180050C9BB /* NewSubscriptionViewController.m */; };
-		366D76381D58668200FD30DB /* BCSubscriptionQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 366D76371D58668200FD30DB /* BCSubscriptionQuery.m */; };
-		366D763B1D5876E200FD30DB /* BCNewSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 366D763A1D5876E200FD30DB /* BCNewSubscription.m */; };
 		367267DC1BAA63BC007D7C64 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 367267D81BAA63BC007D7C64 /* ScanViewController.m */; };
 		367267DD1BAA63BC007D7C64 /* pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 367267DA1BAA63BC007D7C64 /* pick_bg@2x.png */; };
 		367267DE1BAA63BC007D7C64 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 367267DB1BAA63BC007D7C64 /* line@2x.png */; };
@@ -175,10 +169,6 @@
 		3606FCD41D925E1400DFED02 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		3606FCD51D925E1400DFED02 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		3606FCD61D925E1400DFED02 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		360A449C1D61A5B800668FF5 /* SubscriptionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionListViewController.h; sourceTree = "<group>"; };
-		360A449D1D61A5B800668FF5 /* SubscriptionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionListViewController.m; sourceTree = "<group>"; };
-		360F492B1D52F45A00268F21 /* BCSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSubscription.h; sourceTree = "<group>"; };
-		360F492C1D52F45A00268F21 /* BCSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSubscription.m; sourceTree = "<group>"; };
 		361778F41CB666D800C4CCB0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		361877091C2D134B00CE4AED /* BeeCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BeeCloud.bundle; sourceTree = "<group>"; };
 		362FC8E01BF5DE5F007450FF /* XCTestCase+AsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+AsyncTesting.h"; sourceTree = "<group>"; };
@@ -191,8 +181,6 @@
 		36379D361BC66A1300CA6C81 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		36383E6C1D1D140E00CB6DBD /* BCPreRefundTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPreRefundTest.m; sourceTree = "<group>"; };
 		3639726E1C7AB60300412108 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
-		363AE73D1D546C55007AEE2F /* SubscriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionViewController.h; sourceTree = "<group>"; };
-		363AE73E1D546C55007AEE2F /* SubscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionViewController.m; sourceTree = "<group>"; };
 		36501E171C06E87300BC8B8A /* BCBaseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCBaseResult.h; sourceTree = "<group>"; };
 		36501E181C06E87300BC8B8A /* BCBaseResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCBaseResult.m; sourceTree = "<group>"; };
 		36501E191C06E87300BC8B8A /* BCQueryBillResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCQueryBillResult.h; sourceTree = "<group>"; };
@@ -241,12 +229,6 @@
 		36501E791C06FC5300BC8B8A /* BCBaseResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCBaseResp.m; path = BCBase/BCBaseResp.m; sourceTree = "<group>"; };
 		3658B0001BB2A0DA00183C28 /* PayChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayChannelCell.h; sourceTree = "<group>"; };
 		3658B0011BB2A0DA00183C28 /* PayChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayChannelCell.m; sourceTree = "<group>"; };
-		366807BF1D5DA7180050C9BB /* NewSubscriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewSubscriptionViewController.h; sourceTree = "<group>"; };
-		366807C01D5DA7180050C9BB /* NewSubscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewSubscriptionViewController.m; sourceTree = "<group>"; };
-		366D76361D58668200FD30DB /* BCSubscriptionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSubscriptionQuery.h; sourceTree = "<group>"; };
-		366D76371D58668200FD30DB /* BCSubscriptionQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSubscriptionQuery.m; sourceTree = "<group>"; };
-		366D76391D5876E200FD30DB /* BCNewSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCNewSubscription.h; sourceTree = "<group>"; };
-		366D763A1D5876E200FD30DB /* BCNewSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCNewSubscription.m; sourceTree = "<group>"; };
 		367267D81BAA63BC007D7C64 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		367267D91BAA63BC007D7C64 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
 		367267DA1BAA63BC007D7C64 /* pick_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pick_bg@2x.png"; sourceTree = "<group>"; };
@@ -568,32 +550,6 @@
 			path = WXPay;
 			sourceTree = "<group>";
 		};
-		360A449F1D61B39300668FF5 /* Subscription */ = {
-			isa = PBXGroup;
-			children = (
-				363AE73D1D546C55007AEE2F /* SubscriptionViewController.h */,
-				363AE73E1D546C55007AEE2F /* SubscriptionViewController.m */,
-				360A449C1D61A5B800668FF5 /* SubscriptionListViewController.h */,
-				360A449D1D61A5B800668FF5 /* SubscriptionListViewController.m */,
-				366807BF1D5DA7180050C9BB /* NewSubscriptionViewController.h */,
-				366807C01D5DA7180050C9BB /* NewSubscriptionViewController.m */,
-			);
-			name = Subscription;
-			sourceTree = "<group>";
-		};
-		360F492A1D52F43D00268F21 /* BCSubscription */ = {
-			isa = PBXGroup;
-			children = (
-				360F492B1D52F45A00268F21 /* BCSubscription.h */,
-				360F492C1D52F45A00268F21 /* BCSubscription.m */,
-				366D76361D58668200FD30DB /* BCSubscriptionQuery.h */,
-				366D76371D58668200FD30DB /* BCSubscriptionQuery.m */,
-				366D76391D5876E200FD30DB /* BCNewSubscription.h */,
-				366D763A1D5876E200FD30DB /* BCNewSubscription.m */,
-			);
-			path = BCSubscription;
-			sourceTree = "<group>";
-		};
 		362FC8DF1BF5DE5F007450FF /* TestCategory */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,7 +630,6 @@
 			isa = PBXGroup;
 			children = (
 				36B2290A1D912CA000DE1A29 /* BCAuth */,
-				360F492A1D52F43D00268F21 /* BCSubscription */,
 				3601089C1D1D197200BDA7E6 /* BCPreRefund */,
 				36501E6F1C06FBE000BC8B8A /* BCBase */,
 				36501E0D1C06E87300BC8B8A /* BCPay */,
@@ -837,7 +792,6 @@
 		369750221B68C659009FAEDB /* BCPayExample */ = {
 			isa = PBXGroup;
 			children = (
-				360A449F1D61B39300668FF5 /* Subscription */,
 				367267D81BAA63BC007D7C64 /* ScanViewController.m */,
 				367267D91BAA63BC007D7C64 /* ScanViewController.h */,
 				367267DA1BAA63BC007D7C64 /* pick_bg@2x.png */,
@@ -1000,11 +954,12 @@
 			};
 			buildConfigurationList = 364BC5A41B5E32FD00EAFCCE /* Build configuration list for PBXProject "BCPay" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 364BC5A01B5E32FD00EAFCCE;
 			productRefGroup = 364BC5AA1B5E32FD00EAFCCE /* Products */;
@@ -1050,7 +1005,6 @@
 				36501E4B1C06EDA800BC8B8A /* BCRefundStatusReq.m in Sources */,
 				3606FCF31D925E1400DFED02 /* UnionPayAdapter.m in Sources */,
 				36DD0FE41D936A5A0027CF7C /* WXPayAdapter.m in Sources */,
-				366D763B1D5876E200FD30DB /* BCNewSubscription.m in Sources */,
 				3697502C1B68C659009FAEDB /* ViewController.m in Sources */,
 				360108A11D1D197200BDA7E6 /* BCPreRefundReq.m in Sources */,
 				3606FCEA1D925E1400DFED02 /* BCOfflinePayReq.m in Sources */,
@@ -1079,18 +1033,15 @@
 				36501E451C06ED8300BC8B8A /* BCQueryBillByIdReq.m in Sources */,
 				36501E651C06F2DF00BC8B8A /* BCQueryRefundsCountResp.m in Sources */,
 				36501E681C06F30100BC8B8A /* BCQueryBillsCountResp.m in Sources */,
-				360F492D1D52F45A00268F21 /* BCSubscription.m in Sources */,
 				3606FCEB1D925E1400DFED02 /* BCOfflineRevertReq.m in Sources */,
 				7CD455551BEC889F00E0EC4A /* BeeCloud+Utils.m in Sources */,
 				363464051C15842C00C724B2 /* PaySandBoxViewController.m in Sources */,
 				3697504B1B68C6D5009FAEDB /* QueryResultViewController.m in Sources */,
-				366D76381D58668200FD30DB /* BCSubscriptionQuery.m in Sources */,
 				3606FCE91D925E1400DFED02 /* OfflineAdapter.m in Sources */,
 				367267DC1BAA63BC007D7C64 /* ScanViewController.m in Sources */,
 				36501E5C1C06F0FF00BC8B8A /* BCQueryBillsReq.m in Sources */,
 				36501E391C06EC9000BC8B8A /* BCPayResp.m in Sources */,
 				36501E3F1C06ECA600BC8B8A /* BCPayPalVerifyReq.m in Sources */,
-				360A449E1D61A5B800668FF5 /* SubscriptionListViewController.m in Sources */,
 				36B2290D1D912CB000DE1A29 /* BCAuthReq.m in Sources */,
 				36501E481C06ED9A00BC8B8A /* BCQueryRefundByIdReq.m in Sources */,
 				368204AF1CB6088B00B0B0A1 /* BCHTTPSessionManager.m in Sources */,
@@ -1101,12 +1052,10 @@
 				36501E7A1C06FC5300BC8B8A /* BCBaseReq.m in Sources */,
 				3606FCEF1D925E1400DFED02 /* BCOfflineStatusResp.m in Sources */,
 				3606FCED1D925E1400DFED02 /* BCOfflinePayResp.m in Sources */,
-				366807C11D5DA7180050C9BB /* NewSubscriptionViewController.m in Sources */,
 				369B3A191BA95CB300051CCE /* GenQrCode.m in Sources */,
 				36501E7B1C06FC5300BC8B8A /* BCBaseResp.m in Sources */,
 				3602F92B1BA031E800A28ADC /* BCPayUtil.m in Sources */,
 				36501E2B1C06E87300BC8B8A /* BCQueryBillResult.m in Sources */,
-				363AE73F1D546C55007AEE2F /* SubscriptionViewController.m in Sources */,
 				36501E561C06EF1100BC8B8A /* BCQueryRefundsReq.m in Sources */,
 				36501E2C1C06E87300BC8B8A /* BCQueryRefundResult.m in Sources */,
 				3606FCD91D925E1400DFED02 /* ApplePayAdapter.mm in Sources */,
