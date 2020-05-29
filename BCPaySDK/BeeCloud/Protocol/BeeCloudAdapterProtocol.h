@@ -15,7 +15,7 @@
 @protocol BeeCloudAdapterDelegate <NSObject>
 
 @optional
-- (BOOL)registerWeChat:(NSString *)appid;
+- (BOOL)registerWeChat:(NSString *)appid universalLink:(NSString *)universalLink;
 - (BOOL)isWXAppInstalled;
 - (void)registerPayPal:(NSString *)clientID secret:(NSString *)secret sandbox:(BOOL)isSandbox;
 - (BOOL)handleOpenUrl:(NSURL *)url;

@@ -40,8 +40,6 @@
 		36501E2C1C06E87300BC8B8A /* BCQueryRefundResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E1C1C06E87300BC8B8A /* BCQueryRefundResult.m */; };
 		36501E381C06EC9000BC8B8A /* BCPayReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E351C06EC9000BC8B8A /* BCPayReq.m */; };
 		36501E391C06EC9000BC8B8A /* BCPayResp.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E371C06EC9000BC8B8A /* BCPayResp.m */; };
-		36501E3E1C06ECA600BC8B8A /* BCPayPalReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E3B1C06ECA600BC8B8A /* BCPayPalReq.m */; };
-		36501E3F1C06ECA600BC8B8A /* BCPayPalVerifyReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E3D1C06ECA600BC8B8A /* BCPayPalVerifyReq.m */; };
 		36501E451C06ED8300BC8B8A /* BCQueryBillByIdReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E441C06ED8300BC8B8A /* BCQueryBillByIdReq.m */; };
 		36501E481C06ED9A00BC8B8A /* BCQueryRefundByIdReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E471C06ED9A00BC8B8A /* BCQueryRefundByIdReq.m */; };
 		36501E4B1C06EDA800BC8B8A /* BCRefundStatusReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 36501E4A1C06EDA800BC8B8A /* BCRefundStatusReq.m */; };
@@ -68,6 +66,7 @@
 		368204B21CB6088B00B0B0A1 /* BCURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 368204AA1CB6088B00B0B0A1 /* BCURLRequestSerialization.m */; };
 		368204B31CB6088B00B0B0A1 /* BCURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 368204AC1CB6088B00B0B0A1 /* BCURLResponseSerialization.m */; };
 		368204B41CB6088B00B0B0A1 /* BCURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 368204AE1CB6088B00B0B0A1 /* BCURLSessionManager.m */; };
+		368E65412480A87700D32556 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368E65402480A87600D32556 /* WebKit.framework */; };
 		368EA8D61BB3922800F1F9D3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368EA8D51BB3922800F1F9D3 /* Security.framework */; };
 		368EA8D91BB3923F00F1F9D3 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368EA8D71BB3923F00F1F9D3 /* AddressBook.framework */; };
 		368EA8DA1BB3923F00F1F9D3 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368EA8D81BB3923F00F1F9D3 /* AddressBookUI.framework */; };
@@ -191,10 +190,6 @@
 		36501E351C06EC9000BC8B8A /* BCPayReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayReq.m; sourceTree = "<group>"; };
 		36501E361C06EC9000BC8B8A /* BCPayResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPayResp.h; sourceTree = "<group>"; };
 		36501E371C06EC9000BC8B8A /* BCPayResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPayResp.m; sourceTree = "<group>"; };
-		36501E3A1C06ECA600BC8B8A /* BCPayPalReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCPayPalReq.h; path = BCPayPal/BCPayPalReq.h; sourceTree = "<group>"; };
-		36501E3B1C06ECA600BC8B8A /* BCPayPalReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCPayPalReq.m; path = BCPayPal/BCPayPalReq.m; sourceTree = "<group>"; };
-		36501E3C1C06ECA600BC8B8A /* BCPayPalVerifyReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCPayPalVerifyReq.h; path = BCPayPal/BCPayPalVerifyReq.h; sourceTree = "<group>"; };
-		36501E3D1C06ECA600BC8B8A /* BCPayPalVerifyReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCPayPalVerifyReq.m; path = BCPayPal/BCPayPalVerifyReq.m; sourceTree = "<group>"; };
 		36501E431C06ED8300BC8B8A /* BCQueryBillByIdReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCQueryBillByIdReq.h; path = BCQueryBillById/BCQueryBillByIdReq.h; sourceTree = "<group>"; };
 		36501E441C06ED8300BC8B8A /* BCQueryBillByIdReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCQueryBillByIdReq.m; path = BCQueryBillById/BCQueryBillByIdReq.m; sourceTree = "<group>"; };
 		36501E461C06ED9A00BC8B8A /* BCQueryRefundByIdReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCQueryRefundByIdReq.h; path = BCQueryRefundById/BCQueryRefundByIdReq.h; sourceTree = "<group>"; };
@@ -246,6 +241,8 @@
 		368204AC1CB6088B00B0B0A1 /* BCURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCURLResponseSerialization.m; sourceTree = "<group>"; };
 		368204AD1CB6088B00B0B0A1 /* BCURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCURLSessionManager.h; sourceTree = "<group>"; };
 		368204AE1CB6088B00B0B0A1 /* BCURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCURLSessionManager.m; sourceTree = "<group>"; };
+		368E65402480A87600D32556 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		368E65422480B05C00D32556 /* BCPay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BCPay.entitlements; sourceTree = "<group>"; };
 		368EA8D51BB3922800F1F9D3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		368EA8D71BB3923F00F1F9D3 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		368EA8D81BB3923F00F1F9D3 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -323,6 +320,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368E65412480A87700D32556 /* WebKit.framework in Frameworks */,
 				360A44A01D61C06400668FF5 /* libsqlite3.tbd in Frameworks */,
 				36FAD4FB1D2FA5F000955FC0 /* CoreMotion.framework in Frameworks */,
 				361778F51CB666D800C4CCB0 /* CoreTelephony.framework in Frameworks */,
@@ -602,6 +600,7 @@
 		364BC6E81B5F2AE700EAFCCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				368E65402480A87600D32556 /* WebKit.framework */,
 				36FAD4FA1D2FA5F000955FC0 /* CoreMotion.framework */,
 				361778F41CB666D800C4CCB0 /* CoreTelephony.framework */,
 				3639726E1C7AB60300412108 /* PassKit.framework */,
@@ -633,7 +632,6 @@
 				3601089C1D1D197200BDA7E6 /* BCPreRefund */,
 				36501E6F1C06FBE000BC8B8A /* BCBase */,
 				36501E0D1C06E87300BC8B8A /* BCPay */,
-				36501E2D1C06E9A000BC8B8A /* BCPayPal */,
 				36501E301C06EA8100BC8B8A /* BCQueryBillById */,
 				36501E2E1C06EA3000BC8B8A /* BCQueryBills */,
 				36501E4C1C06EE1000BC8B8A /* BCQueryBillsCount */,
@@ -668,17 +666,6 @@
 				36501E1C1C06E87300BC8B8A /* BCQueryRefundResult.m */,
 			);
 			path = BCResults;
-			sourceTree = "<group>";
-		};
-		36501E2D1C06E9A000BC8B8A /* BCPayPal */ = {
-			isa = PBXGroup;
-			children = (
-				36501E3A1C06ECA600BC8B8A /* BCPayPalReq.h */,
-				36501E3B1C06ECA600BC8B8A /* BCPayPalReq.m */,
-				36501E3C1C06ECA600BC8B8A /* BCPayPalVerifyReq.h */,
-				36501E3D1C06ECA600BC8B8A /* BCPayPalVerifyReq.m */,
-			);
-			name = BCPayPal;
 			sourceTree = "<group>";
 		};
 		36501E2E1C06EA3000BC8B8A /* BCQueryBills */ = {
@@ -792,6 +779,7 @@
 		369750221B68C659009FAEDB /* BCPayExample */ = {
 			isa = PBXGroup;
 			children = (
+				368E65422480B05C00D32556 /* BCPay.entitlements */,
 				367267D81BAA63BC007D7C64 /* ScanViewController.m */,
 				367267D91BAA63BC007D7C64 /* ScanViewController.h */,
 				367267DA1BAA63BC007D7C64 /* pick_bg@2x.png */,
@@ -1019,7 +1007,6 @@
 				3602F92A1BA031E800A28ADC /* BCPayCache.m in Sources */,
 				3697504C1B68C6D5009FAEDB /* GuideViewController.m in Sources */,
 				3658B0021BB2A0DA00183C28 /* PayChannelCell.m in Sources */,
-				36501E3E1C06ECA600BC8B8A /* BCPayPalReq.m in Sources */,
 				368204B21CB6088B00B0B0A1 /* BCURLRequestSerialization.m in Sources */,
 				36501E591C06F0E300BC8B8A /* BCQueryRefundsResp.m in Sources */,
 				363464041C15842C00C724B2 /* BCSandBoxAdapter.m in Sources */,
@@ -1041,7 +1028,6 @@
 				367267DC1BAA63BC007D7C64 /* ScanViewController.m in Sources */,
 				36501E5C1C06F0FF00BC8B8A /* BCQueryBillsReq.m in Sources */,
 				36501E391C06EC9000BC8B8A /* BCPayResp.m in Sources */,
-				36501E3F1C06ECA600BC8B8A /* BCPayPalVerifyReq.m in Sources */,
 				36B2290D1D912CB000DE1A29 /* BCAuthReq.m in Sources */,
 				36501E481C06ED9A00BC8B8A /* BCQueryRefundByIdReq.m in Sources */,
 				368204AF1CB6088B00B0B0A1 /* BCHTTPSessionManager.m in Sources */,
@@ -1212,7 +1198,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = BCPayExample/BCPay.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1238,7 +1224,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.beecloud.BeeCloud111;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.beecloud.BeeCloud;
 				PRODUCT_NAME = BCPay;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1255,7 +1241,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = BCPayExample/BCPay.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1277,7 +1263,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.beecloud.BeeCloud111;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.beecloud.BeeCloud;
 				PRODUCT_NAME = BCPay;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

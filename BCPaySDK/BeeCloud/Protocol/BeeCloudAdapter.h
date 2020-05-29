@@ -11,7 +11,7 @@
 
 @interface BeeCloudAdapter : NSObject
 
-+ (BOOL)beeCloudRegisterWeChat:(NSString *)appid;
++ (BOOL)beeCloudRegisterWeChat:(NSString *)appid universalLink:(NSString *)universalLink;
 + (BOOL)beeCloudIsWXAppInstalled;
 + (void)beeCloudRegisterPayPal:(NSString *)clientID secret:(NSString *)secret sandbox:(BOOL)isSandbox;
 + (BOOL)beeCloud:(NSString *)object handleOpenUrl:(NSURL *)url;

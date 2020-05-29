@@ -26,8 +26,20 @@
     return instance;
 }
 
-- (BOOL)registerWeChat:(NSString *)appid {
-    return [WXApi registerApp:appid];
+- (BOOL)registerWeChat:(NSString *)appid universalLink:(NSString *)universalLink {
+    
+//    [WXApi startLogByLevel:WXLogLevelDetail logBlock:^(NSString *log) {
+//        NSLog(@"WeChatSDK: %@", log);
+//    }];
+    
+   BOOL registerResult = [WXApi registerApp:appid universalLink:universalLink];
+
+//    //调用自检函数
+//    [WXApi checkUniversalLinkReady:^(WXULCheckStep step, WXCheckULStepResult* result) {
+//        NSLog(@"%@, %u, %@, %@", @(step), result.success, result.errorInfo, result.suggestion);
+//    }];
+    
+    return registerResult;
 }
 
 - (BOOL)handleOpenUrl:(NSURL *)url {
@@ -48,7 +60,11 @@
     NSString *time = [dic stringValueForKey:@"timestamp" defaultValue:@""];
     request.timeStamp = time.intValue;
     request.sign = [dic stringValueForKey:@"pay_sign" defaultValue:@""];
-    return [WXApi sendReq:request];
+    
+    [WXApi sendReq:request completion:^(BOOL success) {
+        NSLog(@"wxapi %@", success?@"yes":@"no");
+    }];
+    return YES;
 }
 
 #pragma mark - Implementation WXApiDelegate

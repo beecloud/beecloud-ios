@@ -12,10 +12,10 @@
 
 @implementation BeeCloudAdapter
 
-+ (BOOL)beeCloudRegisterWeChat:(NSString *)appid {
++ (BOOL)beeCloudRegisterWeChat:(NSString *)appid universalLink:(NSString *)universalLink {
     id adapter = [[NSClassFromString(kAdapterWXPay) alloc] init];
-    if (adapter && [adapter respondsToSelector:@selector(registerWeChat:)]) {
-        return [adapter registerWeChat:appid];
+    if (adapter && [adapter respondsToSelector:@selector(registerWeChat:universalLink:)]) {
+        return [adapter registerWeChat:appid universalLink:universalLink];
     }
     return NO;
 }

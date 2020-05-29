@@ -16,8 +16,6 @@
 #import "PayChannelCell.h"
 
 @interface ViewController ()<BeeCloudDelegate, SCanViewDelegate, QRCodeDelegate> {
-//    PayPalConfiguration * _payPalConfig;
-//    PayPalPayment *_completedPayment;
     PayChannel currentChannel;
     NSMutableArray *channelList;
     NSString * billTitle;
@@ -121,76 +119,6 @@
     payReq.optional = dict;//用于商户业务扩展参数，会在webhook回调时返回
     [BeeCloud sendBCReq:payReq];
 }
-
-#pragma mark - PayPal Pay
-/*
-- (void)doPayPal {
-    BCPayPalReq *payReq = [[BCPayPalReq alloc] init];
-    
-    _payPalConfig = [[PayPalConfiguration alloc] init];
-    _payPalConfig.acceptCreditCards = YES;
-    _payPalConfig.merchantName = @"Awesome Shirts, Inc.";
-    _payPalConfig.merchantPrivacyPolicyURL = [NSURL URLWithString:@"https://www.paypal.com/webapps/mpp/ua/privacy-full"];
-    _payPalConfig.merchantUserAgreementURL = [NSURL URLWithString:@"https://www.paypal.com/webapps/mpp/ua/useragreement-full"];
-    
-    _payPalConfig.languageOrLocale = [NSLocale preferredLanguages][0];
-    
-    _payPalConfig.payPalShippingAddressOption = PayPalShippingAddressOptionPayPal;
-    
-    PayPalItem *item1 = [PayPalItem itemWithName:@"Old jeans with holes"
-                                    withQuantity:2
-                                       withPrice:[NSDecimalNumber decimalNumberWithString:@"84.99"]
-                                    withCurrency:@"USD"
-                                         withSku:@"Hip-00037"];
-    
-    PayPalItem *item2 = [PayPalItem itemWithName:@"Free rainbow patch"
-                                    withQuantity:1
-                                       withPrice:[NSDecimalNumber decimalNumberWithString:@"0.00"]
-                                    withCurrency:@"USD"
-                                         withSku:@"Hip-00066"];
-    
-    PayPalItem *item3 = [PayPalItem itemWithName:@"Long-sleeve plaid shirt (mustache not included)"
-                                    withQuantity:1
-                                       withPrice:[NSDecimalNumber decimalNumberWithString:@"37.99"]
-                                    withCurrency:@"USD"
-                                         withSku:@"Hip-00291"];
-    
-    payReq.items = @[item1, item2, item3];
-    payReq.shipping = @"5.00";
-    payReq.tax = @"2.50";
-    payReq.shortDesc = billTitle;
-    payReq.viewController = self;
-    payReq.payConfig = _payPalConfig;
-    
-    [BeeCloud sendBCReq:payReq];
-    
-}
-
-#pragma mark - PayPal Verify
-- (void)doPayPalVerify {
-    BCPayPalVerifyReq *req = [[BCPayPalVerifyReq alloc] init];
-    req.payment = _completedPayment;
-    req.optional = @{@"key1":@"value1"};
-    [BeeCloud sendBCReq:req];
-}
-
-#pragma mark - PayPalPaymentDelegate
-
-- (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController didCompletePayment:(PayPalPayment *)completedPayment {
-    NSLog(@"PayPal Payment Success! %@", completedPayment.description);
-    
-    _completedPayment = completedPayment;
-    
-    [self doPayPalVerify];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)payPalPaymentDidCancel:(PayPalPaymentViewController *)paymentViewController {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
- */
 
 #pragma mark - BCPay回调
 
@@ -428,10 +356,6 @@
 #elif TARGET_OS_IPHONE
                 [self showScanViewController];
 #endif
-                break;
-            case PayChannelPayPal:
-            case PayChannelPayPalSandbox:
-//                [self doPayPal];
                 break;
             default:
                 break;

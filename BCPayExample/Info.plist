@@ -43,7 +43,7 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>uppayx1</string>
+		<string>weixinULAPI</string>
 		<string>uppayx2</string>
 		<string>uppayx3</string>
 		<string>uppaysdk</string>

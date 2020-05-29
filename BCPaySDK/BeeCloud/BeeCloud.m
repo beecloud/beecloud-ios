@@ -53,25 +53,11 @@
     return [BCPayCache sharedInstance].sandbox;
 }
 
-+ (BOOL)initWeChatPay:(NSString *)wxAppID {
++ (BOOL)initWeChatPay:(NSString *)wxAppID universalLink:(NSString *)universalLink {
     if (!wxAppID.isValid) {
         return NO;
     }
-    return [BeeCloudAdapter beeCloudRegisterWeChat:wxAppID];
-}
-
-+ (BOOL)initPayPal:(NSString *)clientID secret:(NSString *)secret sandbox:(BOOL)isSandbox {
-    
-    if(clientID.isValid && secret.isValid) {
-        BCPayCache *instance = [BCPayCache sharedInstance];
-        instance.payPalClientID = clientID;
-        instance.payPalSecret = secret;
-        instance.isPayPalSandbox = isSandbox;
-        
-        [BeeCloudAdapter beeCloudRegisterPayPal:clientID secret:secret sandbox:isSandbox];
-        return YES;
-    }
-    return NO;
+    return [BeeCloudAdapter beeCloudRegisterWeChat:wxAppID universalLink:universalLink];
 }
 
 + (void)setBeeCloudDelegate:(id<BeeCloudDelegate>)delegate {
@@ -109,8 +95,8 @@
     [BCPayCache sharedInstance].networkTimeout = time;
 }
 
-+ (void)initBCWXPay:(NSString *)wxAppId {
-    [BeeCloudAdapter beeCloudRegisterWeChat:wxAppId];
++ (void)initBCWXPay:(NSString *)wxAppId universalLink:(NSString *)universalLink {
+    [BeeCloudAdapter beeCloudRegisterWeChat:wxAppId universalLink:universalLink];
     [BeeCloudAdapter beeCloudInitBCWXPay:wxAppId];
 }
 
@@ -144,12 +130,6 @@
             break;
         case BCObjsTypeRefundStatusReq://查询退款状态，目前只支持微信、百度
             [instance reqRefundStatus:(BCRefundStatusReq *)req];
-            break;
-        case BCObjsTypePayPal:
-            [instance  reqPayPal:(BCPayPalReq *)req];
-            break;
-        case BCObjsTypePayPalVerify:
-            [instance reqPayPalVerify:(BCPayPalVerifyReq *)req];
             break;
         case BCObjsTypeOfflinePayReq:
             [instance reqOfflinePay:req];
